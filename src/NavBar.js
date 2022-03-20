@@ -1,9 +1,22 @@
+import * as React from 'react';
 import { useState, useEffect, useContext } from 'react';
 import { Context as UserContext } from './UserContext';
 import { Link } from 'react-router-dom';
 import { Button, Grid } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from './themeProvider';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardHeader from '@mui/material/CardHeader';
+import CssBaseline from '@mui/material/CssBaseline';
+import StarIcon from '@mui/icons-material/StarBorder';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import GlobalStyles from '@mui/material/GlobalStyles';
+import Container from '@mui/material/Container';
 
 function NavBar(props) {
 
@@ -34,7 +47,50 @@ function NavBar(props) {
 
     return (
         <>
-            <header className="p-3 bg-dark text-white">
+            <CssBaseline>  
+                 <AppBar
+                    position="static"
+                    color="default"
+                    elevation={0}
+                    sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
+                >
+                    <Toolbar sx={{ flexWrap: 'wrap' }}>
+                    <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
+                        Company name
+                    </Typography>
+                    <nav>
+                        <Link
+                        variant="button"
+                        color="text.primary"
+                        href="#"
+                        sx={{ my: 1, mx: 1.5 }}
+                        >
+                        Features
+                        </Link>
+                        <Link
+                        variant="button"
+                        color="text.primary"
+                        href="#"
+                        sx={{ my: 1, mx: 1.5 }}
+                        >
+                        Enterprise
+                        </Link>
+                        <Link
+                        variant="button"
+                        color="text.primary"
+                        href="#"
+                        sx={{ my: 1, mx: 1.5 }}
+                        >
+                        Support
+                        </Link>
+                    </nav>
+                    <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
+                        Login
+                    </Button>
+                    </Toolbar>
+                </AppBar>
+            </CssBaseline>
+            <header className="justyfy-content p-3 bg-dark text-white">
                 <div className="container">
                     <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                         <a href="/" className="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
@@ -62,6 +118,7 @@ function NavBar(props) {
                     </div>
                 </div>
             </header>
+            
         </>
     )
 };
