@@ -8,13 +8,14 @@ import {
   ListItemText,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-const pages = ["Products", "Services", "ABoutUs", "ContactUs"];
+const pages = ["Home", "Our Team", "Pricing", "Contact Us"];
 const DrawerComp = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   return (
     <React.Fragment>
       <Drawer
+        PaperProps={{sx:{ backgroundColor: "#291615", color:"white",}}}
         anchor="left"
         open={openDrawer}
         onClose={() => setOpenDrawer(false)}
@@ -23,7 +24,7 @@ const DrawerComp = () => {
           {pages.map((page, index) => (
             <ListItemButton key={index}>
               <ListItemIcon>
-                <ListItemText>{page}</ListItemText>
+                <ListItemText sx={{ color: "white"}} >{page}</ListItemText>
               </ListItemIcon>
             </ListItemButton>
           ))}

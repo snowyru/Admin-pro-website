@@ -1,15 +1,11 @@
 import * as React from 'react';
 import { useState, useEffect, useContext } from 'react';
 import { Context as UserContext } from './UserContext';
-import { Link } from 'react-router-dom';
-import { Button, Grid } from "@mui/material";
+import { Button } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
-import theme from './themeProvider';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Container from '@mui/material/Container';
-import AddBusinessRoundedIcon from "@mui/icons-material/AddBusinessRounded";
+
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import {
     Tab,
     Tabs,
@@ -24,9 +20,7 @@ function NavBar(props) {
   
     const [value, setValue] = useState();
     const theme = useTheme();
-    console.log(theme);
     const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-    console.log(isMatch);
 
     const initialState = {
         '/': 'text-secondary',
@@ -55,19 +49,19 @@ function NavBar(props) {
     return (
         <>
        <React.Fragment>
-       <ThemeProvider theme={theme}>
       <AppBar sx={{ background: "#330000" }}>
         <Toolbar>
-          <AddBusinessRoundedIcon sx={{ transform: "scale(2)" }} />
+          <AccountBoxIcon sx={{ transform: "scale(2)" }} />
           {isMatch ? (
             <>
-              <Typography sx={{ fontSize: "2rem", paddingLeft: "10%" }}>
+              <Typography sx={{ fontSize: "1.2rem", paddingLeft: "10%" }}>
                 Admin Professional
               </Typography>
               <DrawerComp />
             </>
           ) : (
             <>
+            <ThemeProvider theme={theme}>
               <Tabs
                 sx={{ marginLeft: "auto" }}
                 indicatorColor="secondary"
@@ -75,22 +69,19 @@ function NavBar(props) {
                 value={value}
                 onChange={(e, value) => setValue(value)}
               >
-                <Tab label="Products" />
-                <Tab label="Services" />
-                <Tab label="About Us" />
-                <Tab label="Contact" />
+                <Tab label="Home" />
+                <Tab label="Our Team" />
+                <Tab label="Pricing" />
+                <Tab label="Contact Us" />
               </Tabs>
-              <Button sx={{ marginLeft: "auto" }} variant="contained">
-                Login
-              </Button>
-              <Button sx={{ marginLeft: "10px" }} variant="contained">
-                SignUp
+              </ThemeProvider>
+              <Button sx={{ marginLeft: "auto" }} variant="contained" color="error">
+                Contact us
               </Button>
             </>
           )}
         </Toolbar>
       </AppBar>
-      </ThemeProvider>
     </React.Fragment>
         </>
     )
