@@ -5,10 +5,12 @@ import { UserContextProvider } from './UserContext';
 import App from './App';
 // import MainScreen from './MainScreen';
 import reportWebVitals from './reportWebVitals';
+import { CssBaseline } from '@mui/material';
 
 ReactDOM.render(
   <React.StrictMode>
     <UserContextProvider>
+      <CssBaseline/>
       <App />
     </UserContextProvider>
   </React.StrictMode>,
