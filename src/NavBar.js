@@ -4,7 +4,6 @@ import { Context as UserContext } from './UserContext';
 import { Button } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import AppBar from '@mui/material/AppBar';
-
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import {
     Tab,
@@ -15,6 +14,7 @@ import {
     useTheme,
   } from "@mui/material";
 import DrawerComp from "./Drawer";
+import { Redirect } from 'react-router-dom';
 
 function NavBar(props) {
   
@@ -22,29 +22,11 @@ function NavBar(props) {
     const theme = useTheme();
     const isMatch = useMediaQuery(theme.breakpoints.down("md"));
 
-    const initialState = {
-        '/': 'text-secondary',
-        '/features': 'text-secondary',
-        '/pricing': 'text-secondary',
-        '/faqs': 'text-secondary',
-        '/about': 'text-secondary'
-    }
+    const [tab, setTab] = React.useState(0);
 
-    let [ linkState, setLinkState ] = useState(initialState);
-    let { state } = useContext(UserContext);
-
-    useEffect(
-        function() {
-            setLinkState(
-                {
-                    ...initialState,
-                    [props.path]: 'text-white'
-                }
-            )
-        },
-        [ props.path ]
-    )
-
+    const handleChange = (event, newValue) => {
+      setTab(newValue);
+    };
 
     return (
         <>
@@ -66,8 +48,8 @@ function NavBar(props) {
                 sx={{ marginLeft: "auto" }}
                 indicatorColor="secondary"
                 textColor="inherit"
-                value={value}
-                onChange={(e, value) => setValue(value)}
+                value={tab}
+                onChange={handleChange}
               >
                 <Tab label="Home" />
                 <Tab label="Our Team" />
