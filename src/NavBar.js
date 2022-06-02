@@ -2,7 +2,6 @@ import * as React from 'react';
 import { useState, useEffect, useContext } from 'react';
 import { Context as UserContext } from './UserContext';
 import { Button } from "@mui/material";
-import { ThemeProvider } from "@mui/material/styles";
 import AppBar from '@mui/material/AppBar';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import {
@@ -43,10 +42,9 @@ function NavBar(props) {
             </>
           ) : (
             <>
-            <ThemeProvider theme={theme}>
               <Tabs
                 sx={{ marginLeft: "auto" }}
-                indicatorColor="secondary"
+                indicatorColor="primary"
                 textColor="inherit"
                 value={tab}
                 onChange={handleChange}
@@ -56,7 +54,6 @@ function NavBar(props) {
                 <Tab label="Pricing" />
                 <Tab label="Contact Us" />
               </Tabs>
-              </ThemeProvider>
               <Button sx={{ marginLeft: "auto" }} variant="contained" color="error">
                 Contact us
               </Button>
