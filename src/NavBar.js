@@ -22,11 +22,11 @@ function NavBar(props) {
     const isMatch = useMediaQuery(theme.breakpoints.down("md"));
 
     const [tab, setTab] = React.useState(0);
-
+    const tabPath = ['Home', 'Our Team', 'Pricing', 'Contact Us'];
     const handleChange = (event, newValue) => {
       setTab(newValue);
     };
-
+    
     return (
         <>
        <React.Fragment>
