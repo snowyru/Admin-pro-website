@@ -43,7 +43,7 @@ function NavBar(props) {
           ) : (
             <>
               <Tabs
-                TabIndicatorProps={{ sx: {backgroundColor : 'green'}}}
+                TabIndicatorProps={{ sx: { backgroundColor: 'red'} }}
                 sx={{ marginLeft: "auto" }}
                 textColor="inherit"
                 value={tab}
