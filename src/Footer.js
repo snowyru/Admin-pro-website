@@ -6,7 +6,7 @@ import {ReactComponent as undraw1} from './undraw1.svg';
 export default function StickyFooter() {
   return (
         <>
-          <footer style={{"margin-top":"-6px"}} className="footer">
+          <footer style={{"marginTop":"-6px"}} className="footer">
             <div className="container">
                 <div className="row">
                     <div className="footer-col">

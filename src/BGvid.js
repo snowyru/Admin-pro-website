@@ -10,12 +10,12 @@ function Home() {
         <>
             <video video autoPlay loop muted
                 style={{  "position ":"absolute",
-                    "z-index":" -2",
+                    "zIndex":" -1",
                     "top":"50%",
                     "left":"50%",
                     "width":"100%",
                     "height":"100%",
-                    "object-fit":"cover",
+                    "objectFit":"cover",
                     "backgroundRepeat":"repeat-y"}}>
                     
                 <source src={vidBG} type="video/mp4"/>
