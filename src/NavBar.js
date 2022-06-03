@@ -22,7 +22,6 @@ function NavBar(props) {
     const isMatch = useMediaQuery(theme.breakpoints.down("md"));
 
     const [tab, setTab] = React.useState(0);
-    const tabPath = ['Home', 'Our Team', 'Pricing', 'Contact Us'];
     const handleChange = (event, newValue) => {
       setTab(newValue);
     };
@@ -55,7 +54,7 @@ function NavBar(props) {
               >
                 <Tab label="Home" />
                 <Tab label="Our Team" />
-                <Tab label="Pricing" />
+                <Tab label="Our Clients" />
                 <Tab label="Contact Us" />
               </Tabs>
               <Button sx={{ marginLeft: "auto" }} variant="contained" color="error">
