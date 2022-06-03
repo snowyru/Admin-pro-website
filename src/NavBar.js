@@ -17,7 +17,7 @@ import { Redirect } from 'react-router-dom';
 
 function NavBar(props) {
   
-    const [value, setValue] = useState();
+
     const theme = useTheme();
     const isMatch = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -26,13 +26,17 @@ function NavBar(props) {
     const handleChange = (event, newValue) => {
       setTab(newValue);
     };
-    
+
     return (
         <>
        <React.Fragment>
       <AppBar sx={{ background: "#330000" }}>
         <Toolbar>
           <AccountBoxIcon sx={{ transform: "scale(2)" }} />
+          {tab === 0 && <Redirect to="/"/>}
+          {tab === 1 && <Redirect to="/OurTeam"/>}
+          {tab === 2 && <Redirect to="/OurClients"/>}
+          {tab === 3 && <Redirect to="/Contact"/>}
           {isMatch ? (
             <>
               <Typography sx={{ fontSize: "1.2rem", paddingLeft: "10%" }}>

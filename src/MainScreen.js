@@ -1,11 +1,9 @@
-import Hero from './Hero';
-import Features from './Features';
+
 
 function MainScreen(props) {
   return (
     <div>
-      <Hero></Hero> 
-      <Features></Features>
+      <h1>This is Mainscreen</h1>
     </div>
   );
 }
