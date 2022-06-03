@@ -9,7 +9,7 @@ function App() {
     return (
         <BrowserRouter>
             <Switch>
-                <LayoutRoute path="/" component={BGvid} exact={true} />
+                <Route path="/" component={BGvid} exact={true} />
                 <LayoutRoute path="/OurTeam" component={OurTeam} exact={true} />
                 <LayoutRoute path="/OurClients" component={OurClients} exact={true} />
                 <LayoutRoute path="/Contact" component={Contact} exact={true} />

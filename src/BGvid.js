@@ -3,7 +3,7 @@ import {Text, View, StyleSheet} from 'react-native';
 import { Box } from '@mui/material';
 import vidBG from './redBG.mp4'
 
-function Home() {
+function BGvid() {
 
     
     return(
@@ -24,4 +24,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default BGvid;
