@@ -10,10 +10,10 @@ export default function StickyFooter() {
                     <div className="footer-col">
                         <h4>Admin Professional</h4>
                         <ul>
-                            <li><Link to="/"Home></Link></li>
-                            <li><Link to="#"Out Team></Link></li>
-                            <li><Link to="#"Pricing></Link></li>
-                            <li><Link to="#"Contact Us></Link></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/OurTeam">Our Team</Link></li>
+                            <li><Link to="/OurClients">Our Clients</Link></li>
+                            <li><Link to="/ContactUs">Contact Us</Link></li>
                         </ul>
                     </div>
                     <div className="footer-col"/>
@@ -23,7 +23,7 @@ export default function StickyFooter() {
                     <div className="footer-col">
                         <h4>follow us</h4>
                         <div className="social-links">
-                            <Link to="https://www.linkedin.com"><i className="fab fa-linkedin-in"></i></Link>
+                            <Link to="https://www.linkedin.com"><i className="fab fa-linkedin-in"/></Link>
                         </div>
                     </div>
                 </div>           
