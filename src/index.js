@@ -1,30 +1,13 @@
-/**
-=========================================================
-* Material Kit 2 React - v2.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "App";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "bootstrap-css-only/css/bootstrap.min.css";
+import "mdbreact/dist/css/mdb.css";
 import "./index.css";
-import { CssBaseline } from "@mui/material";
+import App from "./App";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <CssBaseline/>
-      <App />
+import registerServiceWorker from './registerServiceWorker';
 
-  </React.StrictMode>
-  ,
-  document.getElementById("root")
-);
+ReactDOM.render( <App /> , document.getElementById('root'));
+
+registerServiceWorker();
