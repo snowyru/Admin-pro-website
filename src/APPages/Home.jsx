@@ -7,7 +7,7 @@ import {
   MDBCarouselCaption
 } from 'mdb-react-ui-kit';
 
-export default function App() {
+export default function Home() {
   return (
     <>
         {/* Start Carousel Component  */}
