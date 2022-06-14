@@ -11,7 +11,7 @@ import {
 
 export default function Footer() {
   return (
-    <MDBFooter className='text-center' color='white' bgColor='dark'>
+    <MDBFooter className='text-center APtext' color='danger' bgColor='dark'>
       <MDBContainer className='p-4'>
         <section className='mb-4'>
           <a className='btn btn-outline-light btn-floating m-1' href='#!' role='button'>
@@ -39,7 +39,7 @@ export default function Footer() {
           </a>
         </section>
         
-        <section className='mb-4'>
+        <section className='mb-4 APtext'>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum repellat quaerat
             voluptatibus placeat nam, commodi optio pariatur est quia magnam eum harum corrupti dicta, aliquam
