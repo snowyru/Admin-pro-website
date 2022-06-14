@@ -23,7 +23,7 @@ export default function Navbar() {
   return (
     <MDBNavbar expand='lg' dark bgColor='dark'>
       <MDBContainer >
-        <MDBNavbarBrand href='/Home'>Admin Professional</MDBNavbarBrand>
+        <MDBNavbarBrand className='ms-5' href='/Home'>Admin Professional</MDBNavbarBrand>
 
         <MDBNavbarToggler
           aria-controls='navbarSupportedContent'
@@ -35,14 +35,14 @@ export default function Navbar() {
         </MDBNavbarToggler>
 
         <MDBCollapse navbar show={showBasic}>
-          <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
+          <MDBNavbarNav className='ms-4 mb-2 mb-lg-0'>
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current='page' href='#'>
+              <MDBNavbarLink active aria-current='page' href='/'>
                 Home
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='#'>About Us</MDBNavbarLink>
+              <MDBNavbarLink href='/AboutUs'>About Us</MDBNavbarLink>
             </MDBNavbarItem>
 
             <MDBNavbarItem>
@@ -52,13 +52,13 @@ export default function Navbar() {
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
                   <MDBDropdownItem>
-                    <MDBDropdownLink>Action</MDBDropdownLink>
+                    <MDBDropdownLink href="/OurTeam">Action</MDBDropdownLink>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <MDBDropdownLink>Another action</MDBDropdownLink>
+                    <MDBDropdownLink href="/OurTeam">Another action</MDBDropdownLink>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <MDBDropdownLink>Something else here</MDBDropdownLink>
+                    <MDBDropdownLink href="/OurTeam">Something else here</MDBDropdownLink>
                   </MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
