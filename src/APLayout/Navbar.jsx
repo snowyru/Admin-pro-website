@@ -21,7 +21,7 @@ export default function Navbar() {
   const [showBasic, setShowBasic] = useState(false);
 
   return (
-    <MDBNavbar expand='lg' dark bgColor='dark'>
+    <MDBNavbar dark sticky expand='md' transparent >
       <MDBContainer >
         <MDBNavbarBrand className='ms-5' href='/Home'>Admin Professional</MDBNavbarBrand>
 

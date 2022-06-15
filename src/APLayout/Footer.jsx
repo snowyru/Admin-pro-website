@@ -54,22 +54,22 @@ export default function Footer() {
 
               <ul className='list-unstyled mb-0'>
                 <li>
-                  <a href='#!' className='text-white'>
+                  <a href='#!' className='text-danger'>
                     Link 1
                   </a>
                 </li>
                 <li>
-                  <a href='#!' className='text-white'>
+                  <a href='#!' className='text-danger'>
                     Link 2
                   </a>
                 </li>
                 <li>
-                  <a href='#!' className='text-white'>
+                  <a href='#!' className='text-danger'>
                     Link 3
                   </a>
                 </li>
                 <li>
-                  <a href='#!' className='text-white'>
+                  <a href='#!' className='text-danger'>
                     Link 4
                   </a>
                 </li>
@@ -81,22 +81,22 @@ export default function Footer() {
 
               <ul className='list-unstyled mb-0'>
                 <li>
-                  <a href='#!' className='text-white'>
+                  <a href='#!' className='text-danger'>
                     Link 1
                   </a>
                 </li>
                 <li>
-                  <a href='#!' className='text-white'>
+                  <a href='#!' className='text-danger'>
                     Link 2
                   </a>
                 </li>
                 <li>
-                  <a href='#!' className='text-white'>
+                  <a href='#!' className='text-danger'>
                     Link 3
                   </a>
                 </li>
                 <li>
-                  <a href='#!' className='text-white'>
+                  <a href='#!' className='text-danger'>
                     Link 4
                   </a>
                 </li>
@@ -108,22 +108,22 @@ export default function Footer() {
 
               <ul className='list-unstyled mb-0'>
                 <li>
-                  <a href='#!' className='text-white'>
+                  <a href='#!' className='text-danger'>
                     Link 1
                   </a>
                 </li>
                 <li>
-                  <a href='#!' className='text-white'>
+                  <a href='#!' className='text-danger'>
                     Link 2
                   </a>
                 </li>
                 <li>
-                  <a href='#!' className='text-white'>
+                  <a href='#!' className='text-danger'>
                     Link 3
                   </a>
                 </li>
                 <li>
-                  <a href='#!' className='text-white'>
+                  <a href='#!' className='text-danger'>
                     Link 4
                   </a>
                 </li>
@@ -135,22 +135,22 @@ export default function Footer() {
 
               <ul className='list-unstyled mb-0'>
                 <li>
-                  <a href='#!' className='text-white'>
+                  <a href='#!' className='text-danger'>
                     Link 1
                   </a>
                 </li>
                 <li>
-                  <a href='#!' className='text-white'>
+                  <a href='#!' className='text-danger'>
                     Link 2
                   </a>
                 </li>
                 <li>
-                  <a href='#!' className='text-white'>
+                  <a href='#!' className='text-danger'>
                     Link 3
                   </a>
                 </li>
                 <li>
-                  <a href='#!' className='text-white'>
+                  <a href='#!' className='text-danger'>
                     Link 4
                   </a>
                 </li>
@@ -162,7 +162,7 @@ export default function Footer() {
 
       <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
         © 2020 Copyright : 
-        <a className='text-white' href='/'>
+        <a className='text-danger' href='/'>
          : Admin Professional
         </a>
       </div>
