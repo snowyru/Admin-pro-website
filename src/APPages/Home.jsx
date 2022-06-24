@@ -4,7 +4,10 @@ import {
   MDBCarouselInner,
   MDBCarouselItem,
   MDBCarouselElement,
-  MDBCarouselCaption
+  MDBCarouselCaption,
+  MDBContainer,
+  MDBRow,
+  MDBCol
 } from 'mdb-react-ui-kit';
 
 export default function Home() {
@@ -51,6 +54,35 @@ export default function Home() {
             </MDBCarouselInner>
             </MDBCarousel>
         {/* End Carousel Component */}
+        {/* Start of Gridl */}
+        <br/>
+
+        <MDBRow>
+        <MDBCol md='4'>
+            <h1 class="display-3 text-center text-light ms-2">How can we help you?</h1>
+        </MDBCol>
+        <MDBCol md='8'> 
+            <br/>
+            <br/>
+            <p class="blockquote text-center text-light me-2">
+            
+            Services offered range from:
+            General front office administration,
+            Co-ordination of seminars and registrations, general HR Administration, 
+            Small project team administration logistics.
+            <br/>
+            For further information please send us an e-mail at <a href="mailto:www.adminprofessional.co.za">www.adminprofessional.co.za</a>
+            </p>
+        </MDBCol>
+        </MDBRow>
+
+        
+        <span class="square border border-white border-4">
+        {/* End of Gridl */}
+        {/* Start of Feature */}
+        <h1 class="text-center text-light">Our passion for giving back</h1>
+        </span>
+        {/* End of Feature */}
     </>
   );
 }
