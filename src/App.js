@@ -9,7 +9,7 @@ function App() {
         style={{ height: '100vh' }}
       >
         <div className='text-center'>
-          <h1>Admin Professional</h1>
+          <h1>Admin Professional.net</h1>
           
           
         <div class="container">
@@ -42,11 +42,11 @@ function App() {
           <p className='mb-3'>See you soon😎</p>
           <MDBBtn
             tag='a'
-            href='mailto:info@adminprofessional.co.za'
+            href='mailto:info@adminprofessional.net'
             target='_blank'
             role='button'
           >
-            Email us info@adminprofessional.co.za
+            Email us info@adminprofessional.net
           </MDBBtn>
         </div>
       </div>
