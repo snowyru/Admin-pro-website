@@ -12,6 +12,7 @@ import {
   MDBBtn
 } from 'mdb-react-ui-kit';
 import OfficeHelp from '../APAssets/OfficeHelp.svg';
+import Gift from '../APAssets/Gift.svg';
 
 export default function Home() {
   return (
@@ -63,13 +64,13 @@ export default function Home() {
         <MDBRow>
         <MDBCol md='6'>
             <br/>
-            <div class='ms-5'>
-                <h1 class="display-3 text-center text-light ms-2">How can we help you?</h1>
+            <div class=''>
+                <h1 class="display-3 text-center text-light">How can we help you?</h1>
                 <br/>
                 <p class="blockquote text-center text-light">
                 
                 Services offered range from:
-                General front office administration,
+                General front office administration, <br/>
                 Co-ordination of seminars and registrations, general HR Administration, 
                 Small project team administration logistics.
                 </p>
@@ -87,15 +88,30 @@ export default function Home() {
         <br/>
 
         <div class='text-center'>
-                <p class="blockquote text-center text-light">For more information please send us an e-mail at <br/> </p>
+                <p class="blockquote text-center text-light">For more information<br/> please send us an e-mail at <br/> </p>
                 <MDBBtn color="danger" ><a class="text-white" href="mailto:info@adminprofessional.net">
                 info@adminprofessional.net</a></MDBBtn>
         </div>
-
-        <span class="square border border-white border-4">
+        <br/><br/>
         {/* End of Gridl */}
         {/* Start of Feature */}
-        <h1 class="text-center text-light">Our passion for giving back</h1>
+        <span class="">
+            <h1 class="display-3 text-center text-light ms-2">Our passion for giving back</h1>
+        <br/>
+            <div>
+                <MDBRipple class='text-center' rippleColor="danger" rippleDuration={1000} rippleRadius={100} rippleUnbound rippleTag='span'>
+                <img style={{"marginLeft":"5rem"}} width='70%' class="rounded hover-shadow" src={Gift} alt="Gift"/>
+                </MDBRipple>
+            </div>
+                <div class='container'>
+                <br/>
+                    <p class='blockquote text-center text-light'>
+                        The mission of Admin Professional is not only to provide professional administrative support
+                        in line with best practices but to do this through the sustainable empowerment and development of communities. 
+                        Our projects to date include stationary
+                        drives which are distributed to the underprivileged and date we have sponsored over 700 hours of administrative assistance
+                        to the value of R 154 000! </p>
+                </div>
         </span>
         {/* End of Feature */}
     </>
