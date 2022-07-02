@@ -7,8 +7,11 @@ import {
   MDBCarouselCaption,
   MDBContainer,
   MDBRow,
-  MDBCol
+  MDBCol,
+  MDBRipple,
+  MDBBtn
 } from 'mdb-react-ui-kit';
+import OfficeHelp from '../APAssets/OfficeHelp.svg';
 
 export default function Home() {
   return (
@@ -58,25 +61,37 @@ export default function Home() {
         <br/>
 
         <MDBRow>
-        <MDBCol md='4'>
-            <h1 class="display-3 text-center text-light ms-2">How can we help you?</h1>
+        <MDBCol md='6'>
+            <br/>
+            <div class='ms-5'>
+                <h1 class="display-3 text-center text-light ms-2">How can we help you?</h1>
+                <br/>
+                <p class="blockquote text-center text-light">
+                
+                Services offered range from:
+                General front office administration,
+                Co-ordination of seminars and registrations, general HR Administration, 
+                Small project team administration logistics.
+                </p>
+            </div>
         </MDBCol>
-        <MDBCol md='8'> 
-            <br/>
-            <br/>
-            <p class="blockquote text-center text-light me-2">
-            
-            Services offered range from:
-            General front office administration,
-            Co-ordination of seminars and registrations, general HR Administration, 
-            Small project team administration logistics.
-            <br/>
-            For further information please send us an e-mail at <a href="mailto:www.adminprofessional.co.za">www.adminprofessional.co.za</a>
-            </p>
+        <MDBCol md='6'>   
+        <div className="d-flex justify-content-center ms-5">
+            <MDBRipple rippleColor="danger" rippleDuration={1000} rippleRadius={100} rippleUnbound rippleTag='span'>
+            <img class="img-fluid rounded hover-shadow ms-5" src={OfficeHelp} width='60%' alt="Office Help"/>
+            </MDBRipple>
+        </div>
         </MDBCol>
         </MDBRow>
 
-        
+        <br/>
+
+        <div class='text-center'>
+                <p class="blockquote text-center text-light">For more information please send us an e-mail at <br/> </p>
+                <MDBBtn color="danger" ><a class="text-white" href="mailto:info@adminprofessional.net">
+                info@adminprofessional.net</a></MDBBtn>
+        </div>
+
         <span class="square border border-white border-4">
         {/* End of Gridl */}
         {/* Start of Feature */}
