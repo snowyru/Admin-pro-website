@@ -64,7 +64,7 @@ export default function Home() {
         <MDBRow>
         <MDBCol md='6'>
             <br/>
-            <div class=''>
+            <div style={{"padding":"4rem" }}>
                 <h1 class="display-3 text-center text-light">How can we help you?</h1>
                 <br/>
                 <p class="blockquote text-center text-light">
@@ -77,7 +77,7 @@ export default function Home() {
             </div>
         </MDBCol>
         <MDBCol md='6'>   
-        <div className="d-flex justify-content-center ms-5">
+        <div style={{"paddingTop":"4.5rem" }} className="d-flex justify-content-center ms-5">
             <MDBRipple rippleColor="danger" rippleDuration={1000} rippleRadius={100} rippleUnbound rippleTag='span'>
             <img class="img-fluid rounded hover-shadow ms-5" src={OfficeHelp} width='60%' alt="Office Help"/>
             </MDBRipple>
