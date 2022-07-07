@@ -63,7 +63,6 @@ export default function Home() {
 
         <MDBRow>
         <MDBCol md='6'>
-            <br/>
             <div style={{"padding":"4rem" }}>
                 <h1 class="display-3 text-center text-light">How can we help you?</h1>
                 <br/>
@@ -89,7 +88,7 @@ export default function Home() {
 
         <div class='text-center'>
                 <p class="blockquote text-center text-light">For more information<br/> please send us an e-mail at <br/> </p>
-                <MDBBtn color="danger" ><a class="text-white" href="mailto:info@adminprofessional.net">
+                <MDBBtn className="md-button" color="danger" ><a class="text-white" href="mailto:info@adminprofessional.net">
                 info@adminprofessional.net</a></MDBBtn>
         </div>
         <br/><br/>

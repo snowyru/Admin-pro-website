@@ -18,3 +18,8 @@ code {
 .APLOGO:hover{
   background: url("https://i3.lensdump.com/i/tp3Lm7.png") no-repeat
 }
+
+.md-button {    
+  text-transform: lowercase !important;
+  font-size : 1.5rem !important;
+}
