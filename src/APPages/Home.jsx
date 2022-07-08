@@ -13,25 +13,26 @@ import {
 } from 'mdb-react-ui-kit';
 import OfficeHelp from '../APAssets/OfficeHelp.svg';
 import Gift from '../APAssets/Gift.svg';
+import {motion} from 'framer-motion';
+import { useState } from 'react';
 
 export default function Home() {
   return (
     <>
-        <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
-            <img src="https://i2.lensdump.com/i/tp3vIb.png" class="w-100 max-width: 70%" />
-            <a href="">
-                <div class="mask" style={{backgroundColor : "rgba(59,0,12, 0.9)"}}>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <h1 class="display-1 text-center text-white" >Admin Professional</h1> 
-                        <h1 class="display-2 text-center text-white" >Be at the top of your game.</h1> 
-                        <h1 class="display-4 text-center text-white" >Hire a virtual assistant!</h1>
-                 </div>
-            </a>
-        </div>
+        <MDBRow>
+            <MDBCol md='8'>
+                <img src="https://i2.lensdump.com/i/tp3vIb.png" style={{width: '100%', height: '100%'}} />
+            </MDBCol>
+            <MDBCol md='4'>
+                <motion.div className="quoteBox">
+                <p>Be at the top of your game. 
+                <br/>Hire a virtual assistant!</p>
+                </motion.div>
+            </MDBCol>
+        </MDBRow>
+         
         {/* Start Carousel Component  */}
-            <MDBCarousel showIndicators dark fade>
+            <MDBCarousel showIndicators dark fade> 
             <MDBCarouselInner>
                 <MDBCarouselItem className='active'>
                 <MDBCarouselElement src='https://mdbootstrap.com/img/Photos/Slides/img%20(19).webp' alt='...' />
