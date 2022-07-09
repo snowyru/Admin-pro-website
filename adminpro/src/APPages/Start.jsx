@@ -67,7 +67,7 @@ export default function Start() {
               <motion.div className="startButtons startBtnBox"
                 animate={{
                     scale:[1,1,1.2,1.2,1,1],
-                    rotate: [0,2,-2,2,-2,0]
+                    rotate: [0,2,2,3,-2,-1,0]
                 }}
                 transition={{delay:0.3, repeat: Infinity, duration:4}}>
                 <Button onClick={Tohome} endIcon={<PlayArrowIcon/>} 
