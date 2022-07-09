@@ -38,9 +38,10 @@ export default function Start() {
     <ThemeProvider theme={theme}>
       <div>
       {/* <video style={{"position":"fixed"}} src={redBG} width="100%" autoplay="true" /> */}
-      <video style={{"position":"fixed"}} src={redBG} width="100%" autoplay="true" loop />
+        <img style={{"position":"absolute","zIndex":"1"}} className="APLogo" src="https://i2.lensdump.com/i/tp3vIb.png" alt="tp3vIb.png" border="0" width="100%"/>
+        <video style={{"position":"fixed"}} src={redBG} width="100%" autoPlay loop />
         <img style={{"margin":"0.9rem","position":"fixed"}} src="https://i1.lensdump.com/i/tp3eUT.png" alt="tp3eUT.png" border="0" width="95%"/>
-        <motion.img src="https://i2.lensdump.com/i/tp3vIb.png" alt="tp3vIb.png" border="0" width="100%"/>
+        <img src="https://i2.lensdump.com/i/tp3vIb.png" alt="tp3vIb.png" border="0" width="100%"/>
 
         <div>
           <Grid container >
