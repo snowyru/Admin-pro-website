@@ -32,7 +32,7 @@ const APnavBar = () => {
 
   return (
     <><a id="top"></a>
-    <AppBar position="static" sx={{ bgcolor: "#3B3F3F" }}>
+    <AppBar position="sticky" sx={{ bgcolor: "#3B3F3F" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />

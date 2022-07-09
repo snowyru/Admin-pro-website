@@ -15,6 +15,7 @@ const icon = {
 export default function About() {
   return (
     <>
+    hello?
       <div className="container">
        <motion.svg
         xmlns="http://www.w3.org/2000/svg"

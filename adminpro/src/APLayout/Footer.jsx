@@ -45,7 +45,7 @@ export default function Footer() {
       >
         <Container maxWidth="sm">
           <Typography variant="body1" sx={{color:"white"}}>
-            <a href="#top">Goint up?</a>
+            <a style={{"color":"white"}} href="#top">↑Goint up?↑</a>
           </Typography>
           <Copyright />
         </Container>
