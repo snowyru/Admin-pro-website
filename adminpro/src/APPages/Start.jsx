@@ -7,6 +7,7 @@ import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
 import {motion} from 'framer-motion'
 import redBG from '../APAssets/redBG.mp4';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const theme = createTheme({
   status: {
@@ -31,7 +32,11 @@ const theme = createTheme({
 
 export default function Start() {
 
-  const [clickStart, setClickStart] = useState(false);
+  let Navigate = useNavigate();
+  const Tohome = () => {
+    let path = '/2home';
+    Navigate(path);
+  }
 
   return (
   <>
@@ -40,25 +45,32 @@ export default function Start() {
       {/* <video style={{"position":"fixed"}} src={redBG} width="100%" autoplay="true" /> */}
         <img style={{"position":"absolute","zIndex":"1"}} className="APLogo" src="https://i2.lensdump.com/i/tp3vIb.png" alt="tp3vIb.png" border="0" width="100%"/>
         <video style={{"position":"fixed"}} src={redBG} width="100%" autoPlay loop />
-        <img style={{"margin":"0.9rem","position":"fixed"}} src="https://i1.lensdump.com/i/tp3eUT.png" alt="tp3eUT.png" border="0" width="95%"/>
+        <img style={{"marginLeft":"5rem","marginTop":"2rem","position":"fixed"}} src="https://i1.lensdump.com/i/tp3eUT.png" alt="tp3eUT.png" border="0" width="90%"/>
         <img src="https://i2.lensdump.com/i/tp3vIb.png" alt="tp3vIb.png" border="0" width="100%"/>
 
         <div>
           <Grid container >
             <Grid item xs={5} md={6}>
-            <div className="startButtons">
-              <Button startIcon={<MailOutlineIcon/>} size="large" variant="contained">Email Us</Button>
-              </div>
+            <motion.div className="startButtons startBtnBox"
+                animate={{
+                    scale:[1,1.05,1,1],
+                    rotate: [0,0,0,0]
+                }}
+                transition={{delay:0.3, repeat: Infinity, duration:3}}>
+              <Button 
+                startIcon={<MailOutlineIcon/>} size="large" variant="contained"
+                onClick={() => window.location = 'mailto:info@adminprofessional.net'}>Email Us</Button>
+              </motion.div>
             </Grid>
             <Divider orientation="vertical" variant="middle" flexItem />
             <Grid item xs={6} md={5}>
               <motion.div className="startButtons startBtnBox"
                 animate={{
-                    scale:[1,1.2,1.2,1],
-                    rotate: [0,2,-2,0]
+                    scale:[1,1,1.2,1.2,1,1],
+                    rotate: [0,2,-2,2,-2,0]
                 }}
-                transition={{delay:0.3, repeat: Infinity, duration:3}}>
-                <Button onClick={()=>setClickStart(!clickStart)} endIcon={<PlayArrowIcon/>} 
+                transition={{delay:0.3, repeat: Infinity, duration:4}}>
+                <Button onClick={Tohome} endIcon={<PlayArrowIcon/>} 
                 color="secondary" size="large" variant="contained">Start</Button>
               </motion.div>
             </Grid>
