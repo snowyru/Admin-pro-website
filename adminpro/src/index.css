@@ -26,3 +26,20 @@ code {
   opacity: 1;
   transition: 0.5s ease-out ;
 }
+.imgcenterer{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.leftSVG{
+  display: block;
+  width:21%;
+  position: absolute;
+  margin-top:-11rem;
+}
+.rightSVG{
+  margin-left:62rem;
+  margin-top: -6rem;
+  width:18%;
+  position: absolute
+}

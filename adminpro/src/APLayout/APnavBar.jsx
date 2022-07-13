@@ -9,6 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import { motion } from 'framer-motion';
 
 const pages = ['Home', 'About us', 'Contact us'];
 
@@ -24,9 +25,24 @@ const APnavBar = () => {
     setAnchorElNav(null);
   };
 
+  const transition = { duration: 1.4, ease:[0.6, 0.01, -0.05, 0.9]};
+
+  const anNavBar ={ 
+    initial:{
+      opacity:0,
+      y : -1000,
+    },
+    animate :{ 
+      y:0,
+      opacity:1,
+      transition: {duration:1, ...transition}
+    }
+  }
+
   return (
     <>
-    <a id="top"/>
+    <motion.div initial={{opacity:0, y:-220}} animate={{y:0, opacity:1, transition: {duration:1, ...transition}}} id="top">
+      
     <AppBar position="sticky" sx={{ bgcolor: "#3B3F3F" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -137,6 +153,7 @@ const APnavBar = () => {
         </Toolbar>
       </Container>
     </AppBar>
+  </motion.div>
   </>
   );
 };

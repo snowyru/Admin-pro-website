@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
+import {motion} from 'framer-motion'
 
 function Copyright() {
   return (
@@ -19,7 +20,10 @@ function Copyright() {
 }
 
 export default function Footer() {
+  const transition = { duration: 1.4, ease:[0.6, 0.01, -0.05, 0.9]};
   return (
+  <motion.div id="top" 
+    initial={{opacity:0, y:220}} animate={{y:0, opacity:1, transition: {duration:1, ...transition}}}>
     <Box
       sx={{
         display: 'flex',
@@ -51,5 +55,6 @@ export default function Footer() {
         </Container>
       </Box>
     </Box>
+  </motion.div>
   );
 }
