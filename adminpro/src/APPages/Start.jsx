@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Button from '@mui/material/Button'
 import { Grid, Divider } from '@mui/material';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
@@ -7,7 +7,7 @@ import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
 import {motion} from 'framer-motion'
 import redBG from '../APAssets/redBG.mp4';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const theme = createTheme({
   status: {
@@ -34,15 +34,18 @@ export default function Start() {
 
   let Navigate = useNavigate();
   const Tohome = () => {
-    let path = '/2home';
+    let path = '/home';
     Navigate(path);
-  }
+  };
+
+  const startButtonDelay = {
+    hidden:{ opacity: 1, scale:0 }  
+    };
 
   return (
   <>
     <ThemeProvider theme={theme}>
       <div>
-      {/* <video style={{"position":"fixed"}} src={redBG} width="100%" autoplay="true" /> */}
         <img style={{"position":"absolute","zIndex":"1"}} className="APLogo" src="https://i2.lensdump.com/i/tp3vIb.png" alt="tp3vIb.png" border="0" width="100%"/>
         <video style={{"position":"fixed"}} src={redBG} width="100%" autoPlay loop />
         <img style={{"marginLeft":"5rem","marginTop":"2rem","position":"fixed"}} src="https://i1.lensdump.com/i/tp3eUT.png" alt="tp3eUT.png" border="0" width="90%"/>
@@ -51,12 +54,13 @@ export default function Start() {
         <div>
           <Grid container >
             <Grid item xs={5} md={6}>
-            <motion.div className="startButtons startBtnBox"
+            <motion.div initial={{opacity: 0}} className="startButtons startBtnBox"
                 animate={{
+                    opacity: 1,
                     scale:[1,1.05,1,1],
                     rotate: [0,0,0,0]
                 }}
-                transition={{delay:0.3, repeat: Infinity, duration:3}}>
+                transition={{delay:0.3, yoyo: Infinity, duration:3}}>
               <Button 
                 startIcon={<MailOutlineIcon/>} size="large" variant="contained"
                 onClick={() => window.location = 'mailto:info@adminprofessional.net'}>Email Us</Button>

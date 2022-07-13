@@ -7,11 +7,8 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 
 const pages = ['Home', 'About us', 'Contact us'];
 
@@ -22,20 +19,18 @@ const APnavBar = () => {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
   return (
-    <><a id="top"></a>
+    <>
+    <a id="top"/>
     <AppBar position="sticky" sx={{ bgcolor: "#3B3F3F" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <img src="https://i2.lensdump.com/i/tp3GnH.png" alt="tp3GnH.png" border="0" width="6%" />
           <Typography
             variant="h6"
             noWrap
@@ -44,14 +39,14 @@ const APnavBar = () => {
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
+              fontFamily: 'source-code-pro',
               fontWeight: 700,
-              letterSpacing: '.3rem',
+              letterSpacing: '.01rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
           >
-            LOGO
+            Admin Professional
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -90,7 +85,6 @@ const APnavBar = () => {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -100,14 +94,14 @@ const APnavBar = () => {
               mr: 2,
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              fontFamily: 'monospace',
+              fontFamily: 'source-code-pro',
               fontWeight: 700,
-              letterSpacing: '.3rem',
+              letterSpacing: '.01rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
           >
-            LOGO
+            Admin Professional
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
