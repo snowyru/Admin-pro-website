@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Button from '@mui/material/Button'
 import { Grid, Divider } from '@mui/material';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
@@ -8,6 +8,7 @@ import { ThemeProvider } from '@emotion/react';
 import {motion} from 'framer-motion'
 import redBG from '../APAssets/redBG.mp4';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 const theme = createTheme({
   status: {
@@ -32,15 +33,17 @@ const theme = createTheme({
 
 export default function Start() {
 
+  const [isStarted, setisStarted] = useState(false);
+
+  useEffect(() => {
+    setisStarted(true)},[]
+  );
+
   let Navigate = useNavigate();
   const Tohome = () => {
     let path = '/home';
     Navigate(path);
   };
-
-  const startButtonDelay = {
-    hidden:{ opacity: 1, scale:0 }  
-    };
 
   return (
   <>
@@ -54,13 +57,11 @@ export default function Start() {
         <div>
           <Grid container >
             <Grid item xs={5} md={6}>
-            <motion.div initial={{opacity: 0}} className="startButtons startBtnBox"
-                animate={{
-                    opacity: 1,
-                    scale:[1,1.05,1,1],
-                    rotate: [0,0,0,0]
-                }}
-                transition={{delay:0.3, yoyo: Infinity, duration:3}}>
+            <motion.div className="startButtons"
+                exit={{opacity: 0}}
+                whileHover={{scale:[1,1.1,1.11,1.1,1]}}
+                whileNotHover={{scale:[0]}}
+                transition={{repeat: Infinity, duration:4, ease: [0.43, 0.13, 0.23, 0.96]}}>
               <Button 
                 startIcon={<MailOutlineIcon/>} size="large" variant="contained"
                 onClick={() => window.location = 'mailto:info@adminprofessional.net'}>Email Us</Button>
@@ -68,12 +69,13 @@ export default function Start() {
             </Grid>
             <Divider orientation="vertical" variant="middle" flexItem />
             <Grid item xs={6} md={5}>
-              <motion.div className="startButtons startBtnBox"
-                animate={{
-                    scale:[1,1,1.2,1.2,1,1],
-                    rotate: [0,2,2,3,-2,-1,0]
+              <motion.div className="startButtons"
+                exit={{opacity: 0}}
+                whileHover={{
+                    scale:[1,1.2,1.21,1.2,1,1],
+                    rotate: [0,2,-2,3,-2,-1,0]
                 }}
-                transition={{delay:0.3, repeat: Infinity, duration:4}}>
+                transition={{repeat: Infinity, duration:4}}>
                 <Button onClick={Tohome} endIcon={<PlayArrowIcon/>} 
                 color="secondary" size="large" variant="contained">Start</Button>
               </motion.div>

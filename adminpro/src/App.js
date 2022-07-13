@@ -5,7 +5,7 @@ import APnavBar from "./APLayout/APnavBar";
 import Home from "./APPages/Home";
 import About from "./APPages/About";
 import Start from "./APPages/Start";
-import Start2Home from './APPages/Start2Home';
+import { AnimatePresence } from 'framer-motion';
 
 const Layout = () => (
   <>
@@ -15,17 +15,19 @@ const Layout = () => (
   </>
 )
 
-function App() {
+function App(isStarted) {
+
   return (
     <Router>
+      <AnimatePresence initial={false} exitBeforeEnter>
         <Routes>
-          <Route path="/" element={<Start/>} />
-          <Route path="/2home" element={<Start2Home/>} />
+          {isStarted &&(<Route path="/" element={<Start/>}/>)}          
             <Route element={<Layout/>}>
               <Route path="/home" element={<Home/>} />
               <Route path="/aboutUS" element={<About/>} />
             </Route>          
         </Routes>
+      </AnimatePresence>
     </Router>
     );
   }
