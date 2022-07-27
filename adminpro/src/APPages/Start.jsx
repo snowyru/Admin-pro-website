@@ -52,7 +52,7 @@ export default function Start() {
       <div>
         <motion.img exit={{opacity: 1, duration:1}} style={{"position":"absolute","zIndex":"1"}} className="APLogo" src="https://i2.lensdump.com/i/tp3vIb.png" alt="tp3vIb.png" border="0" width="100%"/>
         <video style={{"position":"fixed"}} src={redBG} width="100%" autoPlay loop />
-        <img style={{"padding":"2rem","position":"fixed"}} src="https://i1.lensdump.com/i/tp3eUT.png" alt="tp3eUT.png" border="0" width="90%"/>
+        <img className="transLOGO" src="https://i1.lensdump.com/i/tp3eUT.png" alt="tp3eUT.png" border="0"/>
         <img src="https://i2.lensdump.com/i/tp3vIb.png" alt="tp3vIb.png" border="0" width="100%"/>
 
         <div>
@@ -62,7 +62,7 @@ export default function Start() {
                 exit={lexit}
                 whileHover={{scale:[1,1.1,1.11,1.1,1]}}
                 transition={{ duration:2, ease: [0.43, 0.13, 0.23, 0.96]}}>
-              <Button 
+              <Button className=""
                 startIcon={<MailOutlineIcon/>} size="large" variant="contained"
                 onClick={() => window.location = 'mailto:info@adminprofessional.net'}>Email Us</Button>
               </motion.div>
@@ -76,7 +76,8 @@ export default function Start() {
                     rotate: [0,2,-2,3,-2,-1,0]
                 }}
                 transition={{duration:2}}>
-                <Button onClick={Tohome} endIcon={<PlayArrowIcon/>} 
+                <Button className=""
+                onClick={Tohome} endIcon={<PlayArrowIcon/>} 
                 color="secondary" size="large" variant="contained">Start</Button>
               </motion.div>
             </Grid>

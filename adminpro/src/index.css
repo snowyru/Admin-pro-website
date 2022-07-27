@@ -18,6 +18,20 @@ code {
   text-align: center;
 }
 
+.transLOGO{
+  position:fixed;
+  padding:2rem;
+  width: clamp(314px,70%,4000px);
+}
+@media (min-width:400px) {
+  .transLOGO
+  {width:clamp(314px,90%,4000px);}  
+}
+@media (min-width:800px) {
+  .startButtons
+  {width:clamp(314px,90%,4000px);}  
+}
+
 .APLogo{
   opacity: 0;
   transition: 1.5s ease-in ;
@@ -32,14 +46,20 @@ code {
   display: block;
 }
 .leftSVG{
+  /* margin-top:2rem;
+  margin-left:0rem; */
   display: block;
   width:21%;
   position: absolute;
-  margin-top:-11rem;
 }
 .rightSVG{
-  margin-left:62rem;
-  margin-top: -6rem;
-  width:18%;
+  /* margin-top:3rem;
+  margin-left:93rem; */
+  display: block;
+  width:20%;
   position: absolute
+}
+.startBtn{
+  /* font-size: clamp(0.5rem, 1rem+10vw, 5rem); */
+  font-size: clamp(5vh, 8rem, 15vw)
 }
