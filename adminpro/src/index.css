@@ -12,12 +12,12 @@ code {
     monospace;
 }
 
+/* START OF START PAGE */
 .startButtons {
   padding-top: 5vw;
   padding-bottom: 5vw;
   text-align: center;
 }
-
 .transLOGO{
   position:fixed;
   padding:2rem;
@@ -31,7 +31,6 @@ code {
   .startButtons
   {width:clamp(314px,90%,4000px);}  
 }
-
 .APLogo{
   opacity: 0;
   transition: 1.5s ease-in ;
@@ -40,10 +39,19 @@ code {
   opacity: 1;
   transition: 0.5s ease-out ;
 }
+/* END OF START PAGE */
+
+/* START OF HOME PAGE */
 .imgcenterer{
   margin-left: auto;
   margin-right: auto;
   display: block;
+  padding-top: 1rem;
+}
+.BGimg{
+  position:absolute;
+  width: 100%;
+  max-height: 65%;
 }
 .leftSVG{
   /* margin-top:2rem;
@@ -63,3 +71,17 @@ code {
   /* font-size: clamp(0.5rem, 1rem+10vw, 5rem); */
   font-size: clamp(5vh, 8rem, 15vw)
 }
+.h2{
+  position: relative;
+  text-align: center;
+  font-size: clamp(1.5rem, 8vw - 2rem, 3rem);
+}
+  /* Start of phone screen css */
+  @media (max-width: 480px) {
+  .BGimg{
+    width: 100%;
+    max-height: 30%;
+  }
+  /* End of phone screen css */
+  }
+/* END OF HOME PAGE */
