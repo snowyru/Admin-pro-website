@@ -1,3 +1,6 @@
+*{
+  overflow-x: hidden;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -47,38 +50,39 @@ code {
   margin-right: auto;
   display: block;
   padding-top: 1rem;
+  padding-bottom:1rem;
 }
 .BGimg{
+  display: inline-block;
   position:absolute;
   width: 100%;
   max-height: 65%;
 }
-.leftSVG{
-  /* margin-top:2rem;
-  margin-left:0rem; */
-  display: block;
-  width:21%;
-  position: absolute;
-}
-.rightSVG{
-  /* margin-top:3rem;
-  margin-left:93rem; */
-  display: block;
-  width:20%;
-  position: absolute
-}
+
 .startBtn{
   /* font-size: clamp(0.5rem, 1rem+10vw, 5rem); */
   font-size: clamp(5vh, 8rem, 15vw)
 }
-.h2{
+.lead{
+  padding-top: 2vw;
   position: relative;
   text-align: center;
-  font-size: clamp(1.5rem, 8vw - 2rem, 3rem);
+  color:white;
+  font-family: source-code-pro;
+  font-style: italic;
+  font-size: clamp(1.2rem, 8vw - 2rem, 3rem);
+}
+.sub{
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family: source-code-pro;
+  font-size: clamp(1rem, 8vw - 2rem, 3rem);
 }
   /* Start of phone screen css */
   @media (max-width: 480px) {
   .BGimg{
+    transform: scaleX(-1);
     width: 100%;
     max-height: 30%;
   }
