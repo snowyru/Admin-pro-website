@@ -77,7 +77,7 @@ code {
   text-align: center;
   color: white;
   font-family: source-code-pro;
-  font-size: clamp(1rem, 8vw - 2rem, 3rem);
+  font-size: clamp(1rem, 8vw - 2rem, 2.6rem);
 }
   /* Start of phone screen css */
   @media (max-width: 480px) {
