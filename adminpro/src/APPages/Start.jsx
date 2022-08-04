@@ -34,7 +34,7 @@ export default function Start() {
 
   let Navigate = useNavigate();
   const Tohome = () => {
-    let path = '/home';
+    let path = '/Home';
     Navigate(path);
   };
   const lexit = {

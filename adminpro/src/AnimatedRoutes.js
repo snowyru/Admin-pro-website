@@ -5,6 +5,7 @@ import APnavBar from "./APLayout/APnavBar";
 import Home from "./APPages/Home";
 import About from "./APPages/About";
 import Start from "./APPages/Start";
+import Contact from "./APPages/Contact";
 import { Outlet, Route, Routes, useLocation } from 'react-router-dom';
 
     const AnimatedRoutes = () => {
@@ -22,8 +23,9 @@ import { Outlet, Route, Routes, useLocation } from 'react-router-dom';
             <Routes location={location} key={location.pathname}>   
             <Route path="/" element={<Start/>}/>
                 <Route element={<Layout/>}>
-                    <Route path="/home" element={<Home/>} />
-                    <Route path="/aboutUS" element={<About/>} />
+                    <Route path="/Home" element={<Home/>} />
+                    <Route path="/AboutUS" element={<About/>} />
+                    <Route path="/ContactUs" element={<Contact/>} />
                 </Route>          
             </Routes>
         </AnimatePresence>
