@@ -10,6 +10,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { motion } from 'framer-motion';
+import {useNavigate} from 'react-router-dom';
 
 const pages = ['Home', 'About us', 'Contact us'];
 
@@ -24,19 +25,13 @@ const APnavBar = () => {
     setAnchorElNav(null);
   };
 
-  const transition = { duration: 1.4, ease:[0.6, 0.01, -0.05, 0.9]};
-
-  const anNavBar ={ 
-    initial:{
-      opacity:0,
-      y : -1000,
-    },
-    animate :{ 
-      y:0,
-      opacity:1,
-      transition: {duration:1, ...transition}
-    }
+  let Navigate = useNavigate();
+  const link = (page) => {
+    var url = page.replace(/\s/g, '');
+    Navigate("/"+url);
   }
+
+  const transition = { duration: 1.4, ease:[0.6, 0.01, -0.05, 0.9]};
 
   return (
     <>
@@ -122,10 +117,10 @@ const APnavBar = () => {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={()=>{handleCloseNavMenu(); link(page)}}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+               ~ {page} ~
               </Button>
             ))}
           </Box>
