@@ -14,6 +14,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.hideScroll{
+  overflow: hidden;
+}
+a {
+  color: white;
+}
 
 /* START OF START PAGE */
 .startButtons {
@@ -58,7 +64,6 @@ code {
   width: 100%;
   max-height: 65%;
 }
-
 .startBtn{
   /* font-size: clamp(0.5rem, 1rem+10vw, 5rem); */
   font-size: clamp(5vh, 8rem, 15vw)
@@ -67,22 +72,22 @@ code {
   padding-top: 2vw;
   position: relative;
   text-align: center;
-  color:white;
+  color:rgb(255, 255, 255);
   font-family: source-code-pro;
   font-style: italic;
-  font-size: clamp(1.2rem, 8vw - 2rem, 3rem);
+  font-size: clamp(1.2rem, 6vw - 2rem, 8rem);
 }
 .sub{
+  -webkit-text-stroke: 0.1px rgb(12, 12, 12);
   position: relative;
   text-align: center;
-  color: white;
+  color: rgb(255, 255, 255);
   font-family: source-code-pro;
-  font-size: clamp(1rem, 8vw - 2rem, 2.6rem);
+  font-size: clamp(1rem, 5vw - 2rem, 6rem);
 }
   /* Start of phone screen css */
   @media (max-width: 480px) {
   .BGimg{
-    transform: scaleX(-1);
     width: 100%;
     max-height: 30%;
   }

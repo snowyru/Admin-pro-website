@@ -22,13 +22,13 @@ function Copyright() {
 export default function Footer() {
   const transition = { duration: 1.4, ease:[0.6, 0.01, -0.05, 0.9]};
   return (
-  <motion.div id="top" 
+  <motion.div id="top"
     initial={{opacity:0, y:220}} animate={{y:0, opacity:1, transition: {duration:1, ...transition}}}>
     <Box
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        minHeight: '100vh',
+        minHeight:"25vh",
         bgcolor: "#FFFFF"
       }}
     >
@@ -49,8 +49,10 @@ export default function Footer() {
       >
         <Container maxWidth="sm">
           <Typography variant="body1" sx={{color:"white"}}>
-            <a style={{"color":"white"}} href="#top">↑Goint up?↑</a>
+            <a style={{"color":"white"}} href="#top">↑Goint up?↑</a><br/>
+            <br/>Email us here: <a href="mailto:info@adminprofessional.co.za">info@adminprofessional.co.za</a>
           </Typography>
+          <br/>
           <Copyright />
         </Container>
       </Box>
