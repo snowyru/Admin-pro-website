@@ -29,13 +29,13 @@ const APnavBar = () => {
   const link = (page) => {
     var url = page.replace(/\s+/g, '');
     Navigate("/"+url);
-  }
+  };
 
   const transition = { duration: 1.4, ease:[0.6, 0.01, -0.05, 0.9]};
 
   return (
     <>
-    <motion.div initial={{opacity:0, y:-220}} animate={{y:0, opacity:1, transition: {duration:1, ...transition}}} id="top">
+    <motion.div exit={{y:-50, opacity:0, transition: { delay: 0.2, ...transition }}} initial={{opacity:0, y:-220}} animate={{y:0, opacity:1, transition: {duration:1, ...transition}}} id="top">
       
     <AppBar position="sticky" sx={{ bgcolor: "#3B3F3F" }}>
       <Container maxWidth="xl">
@@ -89,7 +89,7 @@ const APnavBar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} onClick={()=>{handleCloseNavMenu(); link(page)}}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}

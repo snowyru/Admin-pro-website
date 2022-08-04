@@ -30,11 +30,16 @@ export default function Home() {
     }
   }
   
+  const exit = { 
+    opacity : 0,
+    x : -400,
+    transition:{duration: 1.4, ease:[0.6, 0.01, -0.05, 0.9]},
+   }
 
   return (
   <>
 
-  <motion.img 
+  <motion.img exit={{width:"100%", y:"-15%", transition: { delay: 0.2, ...transition } }}
     animate={{ y: 0, width: "70%", transition: { delay: 0.2, ...transition } }}
     initial={{ width:"100%", y: "-15%" }}
     style={{}}
@@ -42,7 +47,7 @@ export default function Home() {
     src="https://i2.lensdump.com/i/tp3vIb.png"
     alt="tp3vIb.png" border="0"/>
 
-    <motion.div className="hideScroll flexer Txt">
+    <motion.div exit={exit} className="hideScroll flexer Txt">
       <motion.img variants={img} initial={"hidden"} whileInView={"unhidden"}
         viewport={{once:false, amount:0.35}}
         src={FileDrawer} className="BGimg" />
@@ -53,7 +58,7 @@ export default function Home() {
       </motion.div>
     </motion.div>
 
-    <motion.div className="flexer Txt" >
+    <motion.div exit={exit} className="flexer Txt" >
      <motion.img variants={img} initial={"hidden"} whileInView={"unhidden"}
         viewport={{once:false, amount:0.6}}
         src={HandShaker} className="BGimg imgSpace" />
@@ -70,7 +75,7 @@ export default function Home() {
       </motion.div>
     </motion.div>
 
-    <motion.div className="imgContainer flexer Txt">
+    <motion.div exit={exit} className="imgContainer flexer Txt">
      <motion.img variants={img} initial={"hidden"} whileInView={"unhidden"}
         viewport={{once:false, amount:0.6}}
         src={Typer} className="BGimg imgSpace" />
@@ -82,7 +87,7 @@ export default function Home() {
       </motion.div>
     </motion.div>
 
-    <motion.div className="imgContainer flexer Txt">
+    <motion.div exit={exit} className="imgContainer flexer Txt">
      <motion.img variants={img} initial={"hidden"} whileInView={"unhidden"}
         viewport={{once:false, amount:0.6}}
         src={HandPlant} className="BGimg imgSpace" />
