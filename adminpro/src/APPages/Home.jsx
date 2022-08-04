@@ -2,6 +2,7 @@ import React from 'react';
 import {motion} from 'framer-motion';
 import FileDrawer from '../APAssets/FileDrawer.jpg';
 import HandShaker from '../APAssets/HandShaker.jpg';
+import Typer from '../APAssets/Typer.jpg';
 
 export default function Home() {
 
@@ -51,9 +52,7 @@ export default function Home() {
       </motion.div>
     </motion.div>
 
-    <br/>
-
-    <motion.div>
+    <motion.div className="flexer" >
      <motion.img variants={img} initial={"hidden"} whileInView={"unhidden"}
         viewport={{once:false, amount:0.6}}
         src={HandShaker} className="BGimg imgSpace" />
@@ -70,6 +69,17 @@ export default function Home() {
       </motion.div>
     </motion.div>
 
+    <motion.div>
+     <motion.img variants={img} initial={"hidden"} whileInView={"unhidden"}
+        viewport={{once:false, amount:0.6}}
+        src={Typer} className="BGimg imgSpace" />
+      <motion.div variants={text} initial={"hidden"} animate={"unhidden"}
+        transition={{staggerChildren:1}}>
+        <motion.h2 variants={text} transition={transition} className="lead"> We are recommended </motion.h2>
+        <motion.p variants={text} transition={transition} className="sub"> All our marketing is communicated via word-of-mouth. We operate as a small skilled team and bring value to business owners who understands the value of a skilled team. We understand that client information is highly confidential, and we treat each client with the highest integrity. We do not have social media pages but follow many professional and business individuals and groups to keep up to date with topical matters and trends. 
+        </motion.p>
+      </motion.div>
+    </motion.div>
   </>
   );
 }
