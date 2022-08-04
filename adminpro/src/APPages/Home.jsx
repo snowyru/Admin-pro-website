@@ -20,7 +20,7 @@ export default function Home() {
   }
   const img={ 
     hidden:{
-      scale:0.6,
+      scale:0.85,
       opacity:0.1
     },
     unhidden:{
