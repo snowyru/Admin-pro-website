@@ -27,7 +27,7 @@ const APnavBar = () => {
 
   let Navigate = useNavigate();
   const link = (page) => {
-    var url = page.replace(/\s/g, '');
+    var url = page.replace(/\s+/g, '');
     Navigate("/"+url);
   }
 
