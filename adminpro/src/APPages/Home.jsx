@@ -24,7 +24,7 @@ export default function Home() {
     },
     unhidden:{
       scale:1,
-      opacity:0.6,
+      opacity:0.55,
       transition:{duration:1.4, ease:[0.6, 0.01, -0.05, 0.9]},
     }
   }
@@ -41,10 +41,10 @@ export default function Home() {
     src="https://i2.lensdump.com/i/tp3vIb.png"
     alt="tp3vIb.png" border="0"/>
 
-    <motion.div className="hideScroll flexer">
+    <motion.div className="hideScroll flexer Txt">
       <motion.img variants={img} initial={"hidden"} whileInView={"unhidden"}
-        viewport={{once:false, amount:0.6}}
-        src={FileDrawer} className="BGimg Txt" />
+        viewport={{once:false, amount:0.35}}
+        src={FileDrawer} className="BGimg" />
       <motion.div variants={text} initial={"hidden"} animate={"unhidden"}
         transition={{staggerChildren:1}}>
         <motion.h2 variants={text} transition={transition} className="lead"> Be at the top of your game.<br/> Hire a virtual assistant! </motion.h2>
@@ -52,10 +52,10 @@ export default function Home() {
       </motion.div>
     </motion.div>
 
-    <motion.div className="flexer" >
+    <motion.div className="flexer Txt" >
      <motion.img variants={img} initial={"hidden"} whileInView={"unhidden"}
         viewport={{once:false, amount:0.6}}
-        src={HandShaker} className="BGimg imgSpace Txt" />
+        src={HandShaker} className="BGimg imgSpace" />
       <motion.div variants={text} initial={"hidden"} animate={"unhidden"}
         transition={{staggerChildren:1}}>
         <motion.h2 variants={text} transition={transition} className="lead"> How can we help you…? </motion.h2>
@@ -69,10 +69,10 @@ export default function Home() {
       </motion.div>
     </motion.div>
 
-    <motion.div className="imgContainer flexer">
+    <motion.div className="imgContainer flexer Txt">
      <motion.img variants={img} initial={"hidden"} whileInView={"unhidden"}
         viewport={{once:false, amount:0.6}}
-        src={Typer} className="BGimg imgSpace Txt" />
+        src={Typer} className="BGimg imgSpace" />
       <motion.div variants={text} initial={"hidden"} animate={"unhidden"}
         transition={{staggerChildren:1}}>
         <motion.h2 variants={text} transition={transition} className="lead"> We are recommended </motion.h2>

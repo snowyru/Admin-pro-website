@@ -66,7 +66,7 @@ a {
 .BGimg{
   position:absolute;
   width: 100%;
-  max-height: 55%;
+  height: 100%;
   align-items: center;
   justify-content: space-around;
   display: flex;
@@ -84,22 +84,21 @@ a {
   padding-top: 2vw;
   position: relative;
   text-align: center;
-  color:rgb(255, 255, 255);
+  color:rgb(255, 231, 231);
   font-family: source-code-pro;
   font-style: italic;
   font-size: clamp(1.2rem, 6vw - 2rem, 8rem);
 }
 .sub{
-  -webkit-text-stroke: 0.4px rgb(12, 12, 12);
   position: relative;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: rgb(255, 232, 232);
   font-family: source-code-pro;
   font-size: clamp(1rem, 5vw - 2rem, 6rem);
 }
 .Txt{
-  overflow:hidden;
- min-height: clamp(40vh,50vw,60vh);
+overflow:hidden;
+ min-height: clamp(30vh,33vh,35vh);
  width: 100%;
 }
   /* Start of phone screen css */
