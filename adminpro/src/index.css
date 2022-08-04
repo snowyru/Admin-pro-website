@@ -18,6 +18,8 @@ code {
   overflow: hidden;
 }
 .flexer{
+  overflow-y: hidden;
+  position: relative;
   margin-bottom: 6vw;
 }
 a {
@@ -88,19 +90,25 @@ a {
   font-size: clamp(1.2rem, 6vw - 2rem, 8rem);
 }
 .sub{
-  -webkit-text-stroke: 0.1px rgb(12, 12, 12);
+  -webkit-text-stroke: 0.4px rgb(12, 12, 12);
   position: relative;
   text-align: center;
   color: rgb(255, 255, 255);
   font-family: source-code-pro;
   font-size: clamp(1rem, 5vw - 2rem, 6rem);
 }
+.Txt{
+  overflow:hidden;
+ min-height: clamp(40vh,50vw,60vh);
+ width: 100%;
+}
   /* Start of phone screen css */
-  @media (max-width: 480px) {
+  /* @media (max-width: 480px) {
   .BGimg{
     width: 100%;
     max-height: 30%;
   }
+  } */
   /* End of phone screen css */
-  }
+  
 /* END OF HOME PAGE */

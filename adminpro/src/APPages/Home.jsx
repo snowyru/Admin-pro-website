@@ -44,7 +44,7 @@ export default function Home() {
     <motion.div className="hideScroll flexer">
       <motion.img variants={img} initial={"hidden"} whileInView={"unhidden"}
         viewport={{once:false, amount:0.6}}
-        src={FileDrawer} className="BGimg" />
+        src={FileDrawer} className="BGimg Txt" />
       <motion.div variants={text} initial={"hidden"} animate={"unhidden"}
         transition={{staggerChildren:1}}>
         <motion.h2 variants={text} transition={transition} className="lead"> Be at the top of your game.<br/> Hire a virtual assistant! </motion.h2>
@@ -55,7 +55,7 @@ export default function Home() {
     <motion.div className="flexer" >
      <motion.img variants={img} initial={"hidden"} whileInView={"unhidden"}
         viewport={{once:false, amount:0.6}}
-        src={HandShaker} className="BGimg imgSpace" />
+        src={HandShaker} className="BGimg imgSpace Txt" />
       <motion.div variants={text} initial={"hidden"} animate={"unhidden"}
         transition={{staggerChildren:1}}>
         <motion.h2 variants={text} transition={transition} className="lead"> How can we help you…? </motion.h2>
@@ -69,10 +69,10 @@ export default function Home() {
       </motion.div>
     </motion.div>
 
-    <motion.div>
+    <motion.div className="imgContainer flexer">
      <motion.img variants={img} initial={"hidden"} whileInView={"unhidden"}
         viewport={{once:false, amount:0.6}}
-        src={Typer} className="BGimg imgSpace" />
+        src={Typer} className="BGimg imgSpace Txt" />
       <motion.div variants={text} initial={"hidden"} animate={"unhidden"}
         transition={{staggerChildren:1}}>
         <motion.h2 variants={text} transition={transition} className="lead"> We are recommended </motion.h2>
