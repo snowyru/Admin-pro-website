@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from "framer-motion";
+import SquareLogo from '../APAssets/SquareLogo.jpg';
 
 const icon = {
   hidden: {
@@ -12,9 +13,39 @@ const icon = {
   }
 }
 
+const transition = { duration: 1.4, ease:[0.6, 0.01, -0.05, 0.9]};
+
+// const img={ 
+//   hidden:{
+//     scale:0.85,
+//     opacity:0.1
+//   },
+//   unhidden:{
+//     scale:1,
+//     opacity:0.55,
+//     transition:{duration:1.4, ease:[0.6, 0.01, -0.05, 0.9]},
+//   }
+// }
+
 export default function About() {
   return (
     <>
+      <motion.div>
+        <motion.div>
+        
+        <motion.img exit={{width:"100%", y:"-15%", x:0, opacity:1, transition: { delay: 0.2, ...transition } }}
+          animate={{ y: 0, x:-500, opacity: 0, width: "50%", transition: { delay: 0.2, ...transition } }}
+          initial={{ width:"100%", y: "-15%" }}
+          style={{}}
+          className="TransLogo"
+          src="https://i2.lensdump.com/i/tp3vIb.png"
+          alt="tp3vIb.png" border="0"/>
+        
+        <motion.img style={{"opacity": "0"}}
+        src={SquareLogo} className="BGimg imgSpace" />
+        
+        </motion.div>
+      </motion.div>
     hello?
       <div className="container">
        <motion.svg
