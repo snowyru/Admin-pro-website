@@ -52,7 +52,7 @@ export default function Start() {
       <div>
         <motion.img exit={{opacity: 1, duration:1}} style={{"position":"absolute","zIndex":"1"}} className="APLogo" src="https://i2.lensdump.com/i/tp3vIb.png" alt="tp3vIb.png" border="0" width="100%"/>
         <video style={{"position":"fixed"}} src={redBG} width="100%" autoPlay loop />
-        <img className="transLOGO" src="https://i1.lensdump.com/i/tp3eUT.png" alt="tp3eUT.png" border="0"/>
+        <img className="StartLogo" src="https://i1.lensdump.com/i/tp3eUT.png" alt="tp3eUT.png" border="0"/>
         <img src="https://i2.lensdump.com/i/tp3vIb.png" alt="tp3vIb.png" border="0" width="100%"/>
 
         <div>

@@ -94,7 +94,7 @@ export default function Home() {
       <motion.div variants={text} initial={"hidden"} animate={"unhidden"}
         transition={{staggerChildren:1}}>
         <motion.h2 variants={text} transition={transition} className="lead"> Our passion for giving back </motion.h2>
-        <motion.p variants={text} transition={transition} className="sub"> The mission of Admin Professional is not only to provide professional administrative support in line with best practices but to do this through the sustainable empowerment and development of communities. Our projects to date include stationary drives which are distributed to the underprivileged and date we have sponsored over 700 hours of administrative assistance to the value of R 154 000,00. 
+        <motion.p variants={text} transition={transition} className="sub"> The mission of Admin Professional is not only to provide professional administrative support in line with best practices but to do this through the sustainable empowerment and development of communities. Our projects to date include stationary drives which are distributed to the underprivileged and noted we have sponsored over 700 hours of administrative assistance to the value of R 154 000,00. 
         </motion.p>
       </motion.div>
     </motion.div>

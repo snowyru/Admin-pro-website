@@ -49,7 +49,7 @@ export default function Footer() {
       >
         <Container maxWidth="sm">
           <Typography variant="body1" sx={{color:"white"}}>
-            <a style={{"color":"white"}} href="#top">↑Goint up?↑</a><br/>
+            <a style={{"color":"white"}} href="#top">↑Back to the top?↑</a><br/>
             <br/>Email us here: <a href="mailto:info@adminprofessional.co.za">info@adminprofessional.co.za</a>
           </Typography>
           <br/>

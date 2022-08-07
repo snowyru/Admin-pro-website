@@ -25,20 +25,26 @@ code {
 a {
   color: white;
 }
-
+.TransLogo{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-top: 1rem;
+  padding-bottom:1rem;
+}
 /* START OF START PAGE */
 .startButtons {
   padding-top: 5vw;
   padding-bottom: 5vw;
   text-align: center;
 }
-.transLOGO{
+.StartLogo{
   position:fixed;
   padding:2rem;
   width: clamp(314px,70%,4000px);
 }
 @media (min-width:400px) {
-  .transLOGO
+  .StartLogo
   {width:clamp(314px,90%,4000px);}  
 }
 @media (min-width:800px) {
@@ -56,13 +62,6 @@ a {
 /* END OF START PAGE */
 
 /* START OF HOME PAGE */
-.TransLogo{
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  padding-top: 1rem;
-  padding-bottom:1rem;
-}
 .BGimg{
   position:absolute;
   width: 100%;
@@ -100,14 +99,13 @@ a {
 overflow:hidden;
  min-height: clamp(30vh,33vh,35vh);
  width: 100%;
-}
-  /* Start of phone screen css */
-  /* @media (max-width: 480px) {
-  .BGimg{
-    width: 100%;
-    max-height: 30%;
-  }
-  } */
-  /* End of phone screen css */
-  
+}  
 /* END OF HOME PAGE */
+
+/* START OF ABOUT PAGE */
+
+.SquareLogo{
+  position:absolute;
+}
+
+/* END OF ABOUT PAGE */
