@@ -3,31 +3,11 @@ import Button from '@mui/material/Button'
 import { Grid, Divider } from '@mui/material';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
 import {motion} from 'framer-motion'
 import redBG from '../APAssets/redBG.mp4';
 import { useNavigate } from 'react-router-dom';
-
-const theme = createTheme({
-  status: {
-    danger: '#e53e3e',
-  },
-  palette: {
-    primary: {
-      main: '#ffffff',
-      darker: '#053e85',
-    },
-    secondary: {
-      main: '#ff0303',
-      darker: '#053e85',
-    },
-    neutral: {
-      main: '#64748B',
-      contrastText: '#F0F0',
-    },
-  },
-});
+import {theme} from '../Themes'
 
 
 export default function Start() {
