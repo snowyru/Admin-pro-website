@@ -129,8 +129,17 @@ overflow:hidden;
   text-align: center;
   color:rgb(255, 255, 255);
   font-family: source-code-pro;
-  font-style: italic;
   font-size: clamp(0.8rem, 1.82vw , 6rem);
+}
+.leadName{
+  padding-right: 1vw;
+  position: relative;
+  text-align: center;
+  color:rgb(255, 255, 255);
+  font-family: source-code-pro;
+  font-style: bold;
+  font-size: clamp(1.6rem, 3.4vw, 8rem);
+  border-bottom: 0.3vw dotted rgb(255, 0, 0);
 }
 
 /* END OF ABOUT PAGE */
