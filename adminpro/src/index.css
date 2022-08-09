@@ -14,6 +14,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.container{
+  padding:2.5vw;
+}
 .hideScroll{
   overflow: hidden;
 }
@@ -111,7 +114,7 @@ overflow:hidden;
   font-family: source-code-pro;
   font-style: italic;
   font-size: clamp(1.6rem, 3.4vw, 8rem);
-  border-bottom: 0.3vw solid rgba(255, 0, 0, 0.736);
+  border-bottom: 0.3vw double rgba(255, 0, 0, 0.736);
 }
 .leadSmall{
   padding-right: 1vw;
@@ -121,7 +124,7 @@ overflow:hidden;
   font-family: source-code-pro;
   font-style: italic;
   font-size: clamp(1rem, 2.7vw, 8rem);
-  border-bottom: 0.3vw solid rgba(255, 0, 0, 0.736);
+  border-bottom: 0.3vw double rgba(255, 0, 0, 0.736);
 }
 .subSmall{
   padding: 0.5vw;
@@ -141,5 +144,31 @@ overflow:hidden;
   font-size: clamp(1.6rem, 3.4vw, 8rem);
   border-bottom: 0.3vw dotted rgb(255, 0, 0);
 }
-
+.infoScreen {
+  position: fixed;
+  display: block;
+  background-color: #5A0A0A;
+  border-radius: 5vw;
+  width: clamp(50%,90vh,85%);
+  min-height: 60%;
+}
+.infoh1{
+  text-align: center;
+  justify-content: center;
+  font-family: source-code-pro;
+  font-style: italic;
+  font-size: clamp(1.3rem, 3.5vw, 8rem);
+}
+.infop{
+  text-align: center;
+  justify-content: center;
+  font-family: source-code-pro;
+  font-size: clamp(1rem, 1.5vw , 6rem)
+}
+.clientImg{
+  width:12vw;
+}
+.topPad{
+  margin-top:4vh;
+}
 /* END OF ABOUT PAGE */
