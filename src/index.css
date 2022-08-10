@@ -1,0 +1,174 @@
+*{
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.container{
+  padding:2.5vw;
+}
+.hideScroll{
+  overflow: hidden;
+}
+.flexer{
+  overflow-y: hidden;
+  position: relative;
+  margin-bottom: 6vw;
+}
+a {
+  color: white;
+}
+.TransLogo{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-top: 1rem;
+  padding-bottom:1rem;
+}
+/* START OF START PAGE */
+.startButtons {
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  text-align: center;
+}
+.StartLogo{
+  position:fixed;
+  padding:2rem;
+  width: clamp(314px,70%,4000px);
+}
+@media (min-width:400px) {
+  .StartLogo
+  {width:clamp(314px,90%,4000px);}  
+}
+@media (min-width:800px) {
+  .startButtons
+  {width:clamp(314px,90%,4000px);}  
+}
+.APLogo{
+  opacity: 0;
+  transition: 1.5s ease-in ;
+}
+.APLogo:hover{
+  opacity: 1;
+  transition: 0.5s ease-out ;
+}
+/* END OF START PAGE */
+
+/* START OF HOME PAGE */
+.BGimg{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+}
+.imgSpace{
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+}
+.startBtn{
+  /* font-size: clamp(0.5rem, 1rem+10vw, 5rem); */
+  font-size: clamp(5vh, 8rem, 15vw)
+}
+.lead{
+  padding-top: 2vw;
+  position: relative;
+  text-align: center;
+  color:rgb(255, 231, 231);
+  font-family: source-code-pro;
+  font-style: italic;
+  font-size: clamp(1.2rem, 6vw - 2rem, 8rem);
+}
+.sub{
+  position: relative;
+  text-align: center;
+  color: rgb(255, 232, 232);
+  font-family: source-code-pro;
+  font-size: clamp(1rem, 5vw - 2rem, 6rem);
+}
+.Txt{
+overflow:hidden;
+ min-height: clamp(30vh,33vh,35vh);
+ width: 100%;
+}  
+/* END OF HOME PAGE */
+
+/* START OF ABOUT PAGE */
+.leadBig{
+  padding-right: 1vw;
+  position: relative;
+  text-align: center;
+  color:rgb(255, 255, 255);
+  font-family: source-code-pro;
+  font-style: italic;
+  font-size: clamp(1.6rem, 3.4vw, 8rem);
+  border-bottom: 0.3vw double rgba(255, 0, 0, 0.736);
+}
+.leadSmall{
+  padding-right: 1vw;
+  position: relative;
+  text-align: center;
+  color:rgb(255, 255, 255);
+  font-family: source-code-pro;
+  font-style: italic;
+  font-size: clamp(1rem, 2.7vw, 8rem);
+  border-bottom: 0.3vw double rgba(255, 0, 0, 0.736);
+}
+.subSmall{
+  padding: 0.5vw;
+  position: relative;
+  text-align: center;
+  color:rgb(255, 255, 255);
+  font-family: source-code-pro;
+  font-size: clamp(0.8rem, 1.82vw , 6rem);
+}
+.leadName{
+  padding-right: 1vw;
+  position: relative;
+  text-align: center;
+  color:rgb(255, 255, 255);
+  font-family: source-code-pro;
+  font-style: bold;
+  font-size: clamp(1.6rem, 3.4vw, 8rem);
+  border-bottom: 0.3vw dotted rgb(255, 0, 0);
+}
+.infoScreen {
+  position: fixed;
+  display: block;
+  background-color: #5A0A0A;
+  border-radius: 5vw;
+  width: clamp(50%,90vh,85%);
+  min-height: 60%;
+}
+.infoh1{
+  text-align: center;
+  justify-content: center;
+  font-family: source-code-pro;
+  font-style: italic;
+  font-size: clamp(1.3rem, 3.5vw, 8rem);
+}
+.infop{
+  text-align: center;
+  justify-content: center;
+  font-family: source-code-pro;
+  font-size: clamp(1rem, 1.5vw , 6rem)
+}
+.clientImg{
+  width:12vw;
+}
+.topPad{
+  margin-top:4vh;
+}
+/* END OF ABOUT PAGE */
