@@ -40,7 +40,7 @@ export default function About() {
                     <TextField name="message" label="Message" multiline rows={4} placeholder="Type your message here" variant="outlined" fullWidth required />
                   </Grid>
                   <Grid item xs={12}>
-                    <Button type="submit" variant="contained" color="primary" fullWidth>Submit</Button>
+                    <Button type="submit" variant="contained" color="primary" fullWidth>Send</Button>
                   </Grid>
 
                 </Grid>
