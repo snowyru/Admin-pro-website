@@ -52,7 +52,7 @@ export default function About() {
               <Typography variant="body2" component="p" gutterBottom>
                 Fill up the form and our team will get back to you within 24 hours.
             </Typography> 
-              <form name="contact v1" method="post" data-netlify="true" onSubmit="submit" data-netlify-honeypot="bot-field">
+              <form name="contact v1" method="post" data-netlify="true" onSubmit="submit" netlify data-netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="contact v1"/>
                 <div hidden>
                   <input name="bot-field"/>
