@@ -1,39 +1,54 @@
 import React from 'react';
 import { motion } from "framer-motion";
-
-const icon = {
-  hidden: {
-    pathLength: 0,
-    fill: "rgba(255, 255, 255, 0)"
-  },
-  visible: {
-    pathLength: 1,
-    fill: "rgba(255, 255, 255, 1)"
-  }
-}
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
 
 export default function About() {
   return (
     <>
-    hello?
-      <div className="container"> THIS IS CONTACT
-       <motion.svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 100 100"
-        className="item"
-        >
-        <motion.path
-          d="M0 100V0l50 50 50-50v100L75 75l-25 25-25-25z"
-          variants={icon}
-          initial="hidden"
-          animate="visible"
-          transition={{
-            default: { duration: 2, ease: "easeInOut" },
-            fill: { duration: 2, ease: [1, 0, 0.8, 1] }
-          }}
-        />
-        </motion.svg>
-      </div> 
+      <div className="App"> 
+        <Typography gutterBottom variant="h3" align="center">
+        </Typography>
+        <Grid>
+          <Card style={{ maxWidth: 450, padding: "20px 5px", margin: "0 auto" }}>
+            <CardContent>
+              <Typography gutterBottom variant="h5">
+                Contact Us Form
+            </Typography> 
+              <Typography variant="body2" color="textSecondary" component="p" gutterBottom>
+                Fill up the form and our team will get back to you within 24 hours.
+            </Typography> 
+              <form name="contact" netlify >
+                <Grid container spacing={1}>
+                  <Grid xs={12} sm={6} item>
+                    <TextField name="firstName" placeholder="Enter first name" label="First Name" variant="outlined" fullWidth required />
+                  </Grid>
+                  <Grid xs={12} sm={6} item>
+                    <TextField name="lastName" placeholder="Enter last name" label="Last Name" variant="outlined" fullWidth required />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField name="email" type="email" placeholder="Enter email" label="Email" variant="outlined" fullWidth required />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField name="phone" type="number" placeholder="Enter phone number" label="Phone" variant="outlined" fullWidth />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField name="message" label="Message" multiline rows={4} placeholder="Type your message here" variant="outlined" fullWidth required />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Button type="submit" variant="contained" color="primary" fullWidth>Submit</Button>
+                  </Grid>
+
+                </Grid>
+              </form>
+            </CardContent>
+          </Card>
+        </Grid>
+      </div>
     </>
   );
 }
