@@ -2,29 +2,21 @@ import React from 'react';
 import { motion } from "framer-motion";
 import {theme} from '../Themes';
 import { ThemeProvider } from '@emotion/react';
-import SquareLogo from '../APAssets/SquareLogo.jpg';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import RedFiles from '../APAssets/RedFiles.jpg'
 import Avatar from '@mui/material/Avatar';
 import Backdrop from '@mui/material/Backdrop';
 import Button from '@mui/material/Button';
 import AccountBoxRoundedIcon from '@mui/icons-material/AccountBoxRounded';
-import FWBN from '../APAssets/FWBN.png';
-import ActionCoach from '../APAssets/ActionCoach.jpeg';
-import SASLAW from '../APAssets/SASLAW.png';
+import CarouselComp from '../APLayout/Carousel';
+import '../carousel.css';
+//Img
+import SquareLogo from '../APAssets/SquareLogo.jpg';
+import RedFiles from '../APAssets/RedFiles.jpg'
+import FWBN from '../APAssets/FWBN.jpg';
+import ActionCoach from '../APAssets/ActionCoach.jpg';
+import SASLAW from '../APAssets/SASLAW.jpg';
 // import FatimaLI from '../APAssets/FatimaLI.jpg';
-
-const icon = {
-  hidden: {
-    pathLength: 0,
-    fill: "rgba(255, 255, 255, 0)"
-  },
-  visible: {
-    pathLength: 1,
-    fill: "rgba(255, 255, 255, 1)"
-  }
-};
 
 const transition = { duration: 1.4, ease:[0.6, 0.01, -0.05, 0.9]};
 
@@ -72,10 +64,10 @@ const img={
   },
   unhidden:{
     opacity:1,
-    borderRadius:[9,9,9,14,9,9],
-    transition:{repeat:Infinity, duration:1.4, ease:[0.6, 0.01, -0.05, 0.9]},
+    borderRadius:["10%","10%","10%","17%","10%","10%","10%"],
+    transition:{repeat:Infinity, duration:5, ease:[0.6, 0.01, -0.05, 0.9]},
   }
-}
+};
 
 export default function About() {
 
@@ -256,9 +248,7 @@ export default function About() {
 
                 <motion.div>
                   <motion.h1 style={{"borderBottom":"0px"}} className="leadBig" >Some of our clients over past the years include</motion.h1>
-
-                        
-                  
+                    <CarouselComp/>          
                 </motion.div>
 
             </motion.div>
@@ -266,27 +256,6 @@ export default function About() {
           </motion.div>
         </motion.div>
       </ThemeProvider>
-
-
-    hello? About page
-      <div className="container">
-       <motion.svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 100 100"
-        className="item"
-        >
-        <motion.path
-          d="M0 100V0l50 50 50-50v100L75 75l-25 25-25-25z"
-          variants={icon}
-          initial="hidden"
-          animate="visible"
-          transition={{
-            default: { duration: 2, ease: "easeInOut" },
-            fill: { duration: 2, ease: [1, 0, 0.8, 1] }
-          }}
-        />
-        </motion.svg>
-      </div>
     </>
   );
 }

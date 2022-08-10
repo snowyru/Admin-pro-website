@@ -1,0 +1,62 @@
+:root {
+    --no-of-slides: 4;
+    --slide-width: clamp(150px,40vw,250px);
+    --slide-height: 400px;
+    --iteration-time: 5s;
+  }
+  
+  /* @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(var(--slide-width) * var(--no-of-slides)* -1));
+    }
+  } */
+  .carousel_container{
+    margin-bottom: -20vh;
+  }
+  .carousel__wrapper {
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    
+    width: 100%;
+    overflow: visible;
+    margin: 0 auto;
+  }
+  
+  .carousel {
+    padding: 0px 0;
+    background:#3c3c3c;
+    
+    overflow: hidden;
+    width: calc(2 * var(--no-of-slides));
+  }
+  
+  .carousel__slide {
+    animation: scroll var(--iteration-time) linear infinite;
+    display: flex;
+    flex-direction: column;
+    
+    flex: 0 0 auto;
+    width: var(--slide-width);
+    height: var(--slide-height);
+    box-sizing: border-box;
+    /*border: 1px dotted darkblue;*/
+  }
+  
+  .carousel__image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    height: 50%;
+    /*width: 100px;*/
+    margin: 15px 20px;
+  }
+  
+  
+  /* just for analysis remove this 3 rules later*/
+      .carousel__slide {
+        position: relative;
+      }
