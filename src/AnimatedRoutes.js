@@ -6,7 +6,7 @@ import Home from "./APPages/Home";
 import About from "./APPages/About";
 import Start from "./APPages/Start";
 import Contact from "./APPages/Contact";
-import { Navigate, Outlet, Route, Routes, useLocation } from 'react-router-dom';
+import { Outlet, Route, Routes, useLocation } from 'react-router-dom';
 
     const AnimatedRoutes = () => {
     const location = useLocation();
@@ -21,7 +21,7 @@ import { Navigate, Outlet, Route, Routes, useLocation } from 'react-router-dom';
     return (
         <AnimatePresence initial={true} exitBeforeEnter>
             <Routes location={location} key={location.pathname}>   
-            <Route path="/" element={<Navigate to="/Home"/>}/>
+            <Route path="/" element={<Start/>}/>
             
                 <Route element={<Layout/>}>
                     <Route path="/Home" element={<Home/>} />

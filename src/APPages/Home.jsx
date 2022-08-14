@@ -50,7 +50,7 @@ export default function Home() {
     <motion.div exit={exit} className="hideScroll flexer Txt">
       <motion.img variants={img} initial={"hidden"} whileInView={"unhidden"}
         viewport={{once:false, amount:0.35}}
-        src={FileDrawer} className="BGimg" />
+        src={FileDrawer} className="BGimghome" />
       <motion.div variants={text} initial={"hidden"} animate={"unhidden"}
         transition={{staggerChildren:1}}>
         <motion.h2 variants={text} transition={transition} className="lead"> Be at the top of your game.<br/> Hire a virtual assistant! </motion.h2>
@@ -61,7 +61,7 @@ export default function Home() {
     <motion.div exit={exit} className="flexer Txt" >
      <motion.img variants={img} initial={"hidden"} whileInView={"unhidden"}
         viewport={{once:false, amount:0.6}}
-        src={HandShaker} className="BGimg imgSpace" />
+        src={HandShaker} className="BGimghome imgSpace" />
       <motion.div variants={text} initial={"hidden"} animate={"unhidden"}
         transition={{staggerChildren:1}}>
         <motion.h2 variants={text} transition={transition} className="lead"> How can we help you…? </motion.h2>
@@ -70,7 +70,7 @@ export default function Home() {
         Co-ordination of seminars and registrations, general HR Administration, 
         Small project team administration logistics.
 
-        For further information e-mail us at <a href='mailto:info@adminprofessional.co.za' target='blank' >info@adminprofessional.co.za</a> 
+        For further information e-mail us at <a href='mailto:info@adminprofessional.net' target='blank' >info@adminprofessional.net</a> 
         </motion.p>
       </motion.div>
     </motion.div>
@@ -78,7 +78,7 @@ export default function Home() {
     <motion.div exit={exit} className="imgContainer flexer Txt">
      <motion.img variants={img} initial={"hidden"} whileInView={"unhidden"}
         viewport={{once:false, amount:0.6}}
-        src={Typer} className="BGimg imgSpace" />
+        src={Typer} className="BGimghome imgSpace" />
       <motion.div variants={text} initial={"hidden"} animate={"unhidden"}
         transition={{staggerChildren:1}}>
         <motion.h2 variants={text} transition={transition} className="lead"> We are recommended </motion.h2>
@@ -90,7 +90,7 @@ export default function Home() {
     <motion.div exit={exit} className="imgContainer flexer Txt">
      <motion.img variants={img} initial={"hidden"} whileInView={"unhidden"}
         viewport={{once:false, amount:0.6}}
-        src={HandPlant} className="BGimg imgSpace" />
+        src={HandPlant} className="BGimghome imgSpace" />
       <motion.div variants={text} initial={"hidden"} animate={"unhidden"}
         transition={{staggerChildren:1}}>
         <motion.h2 variants={text} transition={transition} className="lead"> Our passion for giving back </motion.h2>

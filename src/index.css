@@ -42,35 +42,35 @@ a {
   padding-bottom:1rem;
 }
 /* START OF START PAGE */
+/* @media (min-width:480px) {
+  .transLOGO
+  {width:clamp(314px,90%,4000px);}  
+} */
 .BGvid{
-  position:fixed;
+  position:absolute;
   width: 100%;
-  background-repeat: repeat-y;
+  aspect-ratio: 7/16 ;
+  object-fit: cover;
 }
 .btnEmail {
   z-index: 3;
-  position: fixed;
-  align-items: center;
+  position: relative;
+  top:-30vh;
+  display:flex;
   justify-content: center;
-  top: 70%;
-  text-align: center;
-  left: 15%;
 }
 .btnStart {
   z-index: 3;
-  position: fixed;
-  align-items: center;
+  position: relative;
+  padding-left: 10vw;
+  display: flex;
   justify-content: center;
-  top: 70%;
-  text-align: center;
-  left: 55%;
 }
 .StartLogo{
-  padding-top:9%;
-  position:fixed;
+  padding-top:2%;
+  position:relative;
   width: 97%;
-  padding-left: 5px;
-
+  padding-left:clamp(0px,1vw,10px);
 }
 .APLogo{
   z-index: 1;
@@ -85,24 +85,23 @@ a {
   transition: 0.5s ease-out ;
 }
 .startContainer{
-  position:relative;
+  position:fixed;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index:0;
+  line-height:90vh
 }
-.btnContainer{
-  position: relative;
-  height:100%;
-  width:100%;
+.BGimg{
+  position:fixed;
+  width: 100%;
+  height: 100vh;
 }
-/* .btnCenter{
-  position: fixed;
-  top: 50%;
-  left:20%
-} */
 /* END OF START PAGE */
 
 /* START OF HOME PAGE */
-.BGimg{
+.BGimghome{
   position:absolute;
   width: 100%;
   height: 100%;
@@ -114,10 +113,6 @@ a {
   align-items: center;
   justify-content: space-around;
   display: flex;
-}
-.startBtn{
-  /* font-size: clamp(0.5rem, 1rem+10vw, 5rem); */
-  font-size: clamp(5vh, 8rem, 15vw)
 }
 .lead{
   padding-top: 2vw;

@@ -52,11 +52,9 @@ export default function About() {
               <Typography variant="body2" component="p" gutterBottom>
                 Fill up the form and our team will get back to you within 24 hours.
             </Typography> 
-              <form netlify name="contact v1" method="post" onSubmit="submit" data-netlify-honeypot="bot-field">
-                <input type="hidden" name="form-name" value="contact v1"/>
-                <div hidden>
-                  <input name="bot-field"/>
-                </div>
+              <form action="https://formsubmit.co/info@adminprofessional.net" method="POST" >
+                <input type="text" name="_honey" style={{display: 'none'}} />
+                <input type="hidden" name="_autoresponse" value="Thank you for submitting your email through our website"/>
                 <Grid container spacing={1}>
                   <Grid xs={12} sm={6} item>
                     <label>
@@ -70,12 +68,12 @@ export default function About() {
                   </Grid>
                   <Grid item xs={12}>
                     <label>
-                    <TextField name="email" type="email" placeholder="Enter email" label="Email" variant="outlined" fullWidth required />
+                    <TextField type="email" name="email" placeholder="Enter email" label="Email" variant="outlined" fullWidth required />
                     </label>
                   </Grid>
                   <Grid item xs={12}>
                     <label>
-                    <TextField name="phone" type="phone" placeholder="Enter phone number" label="Phone" variant="outlined" fullWidth />
+                    <TextField type="phone" name="phone" placeholder="Enter phone number" label="Phone" variant="outlined" fullWidth />
                     </label>
                   </Grid>
                   <Grid item xs={12}>
