@@ -52,7 +52,7 @@ export default function About() {
               <Typography variant="body2" component="p" gutterBottom>
                 Fill up the form and our team will get back to you within 24 hours.
             </Typography> 
-              <form action="https://formsubmit.co/info@adminprofessional.net" method="POST" >
+              <form action="https://formsubmit.co/apinfo1515@gmail.com" method="POST" >
                 <input type="text" name="_honey" style={{display: 'none'}} />
                 <input type="hidden" name="_autoresponse" value="Thank you for submitting your email through our website"/>
                 <Grid container spacing={1}>
