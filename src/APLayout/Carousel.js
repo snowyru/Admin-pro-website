@@ -11,13 +11,16 @@ import ActionCoach from "../APAssets/ActionCoach.jpg";
 
 export default function CarouselComp () {
 
-    const imgs = [Ackerman,Capsicum,Muhammadeyah,HAS,SASLAW,ActionCoach,Labour,BrainE];
+    const imgs = [Ackerman,Capsicum,Muhammadeyah,HAS,SASLAW,ActionCoach,Labour,BrainE
+      ,Ackerman,Capsicum,Muhammadeyah,HAS,SASLAW,ActionCoach,Labour,BrainE];
 
 return(
+<>
 <section class="carousel">
 
   <motion.div class="carousel_container">
-    <motion.div animate={{x:[0,-100,-200,-300,-400,-500,-600,-700,-800,-400,0]}} transition={{repeat:Infinity, duration:15, ease:[0.6,0.01,0.05,0.95], type:"tween" }} class="carousel__wrapper">
+    <motion.div animate={{x:[0,-50,-100,-200,-300,-400,-500,-600,-700,-800,-900,-1000,-1100,-1200,-1300,-1400,-1500,-1600,-1700,-1750]}}
+    transition={{repeat:Infinity, repeatType:"reverse", duration:10, ease:[1,1,1,1], type:"spring"}} class="carousel__wrapper">
     {imgs.map((imgs) => (
         <div class="carousel__slide">
             <img class="carousel__image" alt={imgs} src={imgs}/>
@@ -27,5 +30,6 @@ return(
 
   </motion.div>
 </section>
+</>
 )
 }

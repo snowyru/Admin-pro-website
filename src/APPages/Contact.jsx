@@ -50,36 +50,36 @@ export default function About() {
                 Contact Us Form
             </Typography> 
               <Typography variant="body2" component="p" gutterBottom>
-                Fill up the form and our team will get back to you within 24 hours.
+                Please fill in the form if you have any questions or <br/> to request a quote.
             </Typography> 
               <form action="https://formsubmit.co/01e00a96602cef85b01a0c2efc02f238" method="POST" >
                 <input type="text" name="_honey" style={{display: 'none'}} />
                 <input type="hidden" name="_template" value="box"/>
-                <input type="hidden" name="_autoresponse" value="Thank you for submitting your email through our website"/>
+                <input type="hidden" name="_autoresponse" value="Thank you for submitting your email through adminprofessional.net, our team will assist you shortly within working hours"/>
                 <Grid container spacing={1}>
                   <Grid xs={12} sm={6} item>
                     <label>
-                    <TextField type="text" name="firstName" placeholder="Enter first name" label="First Name" variant="outlined" fullWidth required />
+                    <TextField type="text" name="firstName" placeholder="Enter first name" label="First Name" variant="filled" fullWidth required />
                     </label>                  
                   </Grid>
                   <Grid xs={12} sm={6} item>
                     <label>
-                    <TextField type="text" name="lastName" placeholder="Enter last name" label="Last Name" variant="outlined" fullWidth required />
+                    <TextField type="text" name="lastName" placeholder="Enter last name" label="Last Name" variant="filled" fullWidth required />
                     </label>
                   </Grid>
                   <Grid item xs={12}>
                     <label>
-                    <TextField type="email" name="email" placeholder="Enter email" label="Email" variant="outlined" fullWidth required />
+                    <TextField type="email" name="email" placeholder="Enter email" label="Email" variant="filled" fullWidth required />
                     </label>
                   </Grid>
                   <Grid item xs={12}>
                     <label>
-                    <TextField type="phone" name="phone" placeholder="Enter phone number" label="Phone" variant="outlined" fullWidth />
+                    <TextField type="phone" name="phone" placeholder="Enter phone number" label="Phone" variant="filled" fullWidth />
                     </label>
                   </Grid>
                   <Grid item xs={12}>
                     <label>
-                    <TextField color="primary" type="message" name="message" label="Message" multiline rows={4} placeholder="Type your message here" variant="outlined" fullWidth required />
+                    <TextField color="primary" type="message" name="message" label="Message" multiline rows={4} placeholder="Type your message here" variant="filled" fullWidth required />
                     </label>
                   </Grid>
                   <Grid item xs={12}>

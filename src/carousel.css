@@ -29,7 +29,7 @@
   .carousel {
     padding: 0px 0;
     background:#3c3c3c;
-    
+    display: flex;
     overflow: hidden;
     width: calc(2 * var(--no-of-slides));
   }

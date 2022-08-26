@@ -246,13 +246,13 @@ export default function About() {
                   </motion.p>
                 </motion.div>  
 
-                <motion.div>
+            </motion.div>
+
+                <motion.div className="hideScroll" >
                   <motion.h1 style={{"borderBottom":"0px"}} className="leadBig" >Some of our clients over past the years include</motion.h1>
                     <CarouselComp/>          
                 </motion.div>
-
-            </motion.div>
-
+                
           </motion.div>
         </motion.div>
       </ThemeProvider>
