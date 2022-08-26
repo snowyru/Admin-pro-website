@@ -11,6 +11,7 @@ import AccountBoxRoundedIcon from '@mui/icons-material/AccountBoxRounded';
 import CarouselComp from '../APLayout/Carousel';
 import '../carousel.css';
 //Img
+import LOGO from '../APAssets/LOGO.jpg';
 import SquareLogo from '../APAssets/SquareLogo.jpg';
 import RedFiles from '../APAssets/RedFiles.jpg'
 import FWBN from '../APAssets/FWBN.jpg';
@@ -93,7 +94,7 @@ export default function About() {
             initial={{ width:"100%", y: "-15%" }}
             style={{"position": "absolute"}}
             className="TransLogo"
-            src="https://i2.lensdump.com/i/tp3vIb.png"
+            src={LOGO}
             alt="tp3vIb.png" border="0"/>
           <motion.div className="hideScroll" >
 

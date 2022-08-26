@@ -1,9 +1,11 @@
 import React from 'react';
 import {motion} from 'framer-motion';
+import ProgressiveImage from 'react-progressive-image';
 import FileDrawer from '../APAssets/FileDrawer.jpg';
 import HandShaker from '../APAssets/HandShaker.jpg';
 import Typer from '../APAssets/Typer.jpg';
 import HandPlant from '../APAssets/HandPlant.jpg';
+import LOGO from '../APAssets/LOGO.jpg';
 
 export default function Home() {
 
@@ -44,7 +46,7 @@ export default function Home() {
     initial={{ width:"100%", y: "-15%" }}
     style={{}}
     className="TransLogo"
-    src="https://i2.lensdump.com/i/tp3vIb.png"
+    src={LOGO}
     alt="tp3vIb.png" border="0"/>
 
     <motion.div exit={exit} className="hideScroll flexer Txt">

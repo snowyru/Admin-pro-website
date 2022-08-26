@@ -6,7 +6,8 @@ import { ThemeProvider } from '@emotion/react';
 import {motion} from 'framer-motion'
 import redBG from '../APAssets/redBG.mp4';
 import { useNavigate } from 'react-router-dom';
-import {theme} from '../Themes'
+import {theme} from '../Themes';
+import LOGO from '../APAssets/LOGO.jpg';
 
 
 export default function Start() {
@@ -37,7 +38,7 @@ return (
       <div>
         <video className="BGvid" src={redBG} width="100%"  autoPlay loop muted />
       </div>    
-      <motion.img exit={{opacity: 1, duration:1}} className="APLogo" src="https://i2.lensdump.com/i/tp3vIb.png" alt="tp3vIb.png" width="100%"/>
+      <motion.img exit={{opacity: 1, duration:1}} className="APLogo" src={LOGO} alt="tp3vIb.png" width="100%"/>
         <motion.img exit={{opacity:0,duration:1}} className="StartLogo" src="https://i1.lensdump.com/i/tp3eUT.png" alt="tp3eUT.png"/>
         
       <motion.div className="btnEmail hideScroll">

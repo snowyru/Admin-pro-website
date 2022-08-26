@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import LOGO from '../APAssets/LOGO.jpg';
 
 const transition = { duration: 1.4, ease:[0.6, 0.01, -0.05, 0.9]};
 
@@ -38,7 +39,7 @@ export default function About() {
         initial={{x:0, width:"100%", y: "-15%" }}
         style={{"position": "absolute"}}
         className="TransLogo"
-        src="https://i2.lensdump.com/i/tp3vIb.png"
+        src={LOGO}
         alt="tp3vIb.png" border="0"/>
       <motion.div variants={REnter} exit={RExit} initial={"hidden"} animate={"unhidden"} transition={{staggerChildren:0.6}} className="App"> 
         <Typography gutterBottom variant="h3" align="center">
