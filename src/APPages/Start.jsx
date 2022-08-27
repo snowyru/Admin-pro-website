@@ -4,7 +4,7 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { ThemeProvider } from '@emotion/react';
 import {motion} from 'framer-motion'
-import redBG from '../APAssets/redBG.mp4';
+import redBG from '../APAssets/LoopBG.mp4';
 import { useNavigate } from 'react-router-dom';
 import {theme} from '../Themes';
 import LOGO from '../APAssets/LOGO.jpg';
