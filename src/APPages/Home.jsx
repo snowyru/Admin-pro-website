@@ -1,6 +1,5 @@
 import React from 'react';
 import {motion} from 'framer-motion';
-import ProgressiveImage from 'react-progressive-image';
 import FileDrawer from '../APAssets/FileDrawer.jpg';
 import HandShaker from '../APAssets/HandShaker.jpg';
 import Typer from '../APAssets/Typer.jpg';
