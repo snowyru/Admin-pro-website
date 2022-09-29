@@ -1,4 +1,5 @@
 import React from 'react';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { motion } from "framer-motion";
 import {theme} from '../Themes';
 import { ThemeProvider } from '@emotion/react';
@@ -7,6 +8,7 @@ import Grid from '@mui/material/Grid';
 import CarouselComp from '../APLayout/Carousel';
 import '../carousel.css';
 //Img
+import PlaceholderImage from '../APAssets/PlaceholderImage.jpg'
 import LOGO from '../APAssets/LOGO.jpg';
 import SquareLogo from '../APAssets/SquareLogo.jpg';
 import RedFiles from '../APAssets/RedFiles.jpg'
@@ -51,12 +53,14 @@ export default function About() {
     <>
       <ThemeProvider theme={theme}>
         <motion.div className="hideScroll" >
-          <motion.img exit={{width:"100%", y:"-15%", x:0, opacity:1, transition: { delay: 0.2, ...transition } }}
+          <motion.LazyLoadImage exit={{width:"100%", y:"-15%", x:0, opacity:1, transition: { delay: 0.2, ...transition } }}
             animate={{ y: 0, x:-500, opacity: 0, width: "75%", transition: { delay: 0.2, ...transition } }}
             initial={{ width:"100%", y: "-15%" }}
             style={{"position": "absolute"}}
             className="TransLogo"
             src={LOGO}
+            PlaceholderSrc={PlaceholderImage}
+            effect="blur"
             alt="tp3vIb.png" border="0"/>
           <motion.div className="hideScroll" >
 
@@ -66,7 +70,7 @@ export default function About() {
                   <motion.div className="hideScroll">
                   <motion.img exit={{width:"1%", y:-350, opacity:0, transition: { delay: 0.2, ...transition } }}
                     animate={{width:"100%", y:0, scale:1.2, opacity:1, transition: { delay: 0.2, ...transition } }}
-                    initial={{width:"1%", y:-350, opacity:0}}
+                    initial={{width:"1%", y:-350, opacity:0}} loading="lazy"
                     src={SquareLogo} className="" />
                   </motion.div>
                 </Grid>
@@ -116,7 +120,7 @@ export default function About() {
               </Grid>
             </Box>
 
-            <motion.div>
+            <motion.div exit={RExit}>
               <motion.h2 className="leadBig" > What our clients are saying </motion.h2>
 
                 <motion.div className="leadBig" ><motion.div className="imgSpace hideScroll" >
@@ -149,7 +153,7 @@ export default function About() {
 
             </motion.div>
 
-                <motion.div className="hideScroll" >
+                <motion.div className="hideScroll" exit={RExit} >
                   <motion.h1 style={{"borderBottom":"0px"}} className="leadBig" >Some of our clients over past the years include</motion.h1>
                     <CarouselComp/>          
                 </motion.div>

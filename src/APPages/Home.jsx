@@ -45,12 +45,12 @@ export default function Home() {
     initial={{ width:"100%", y: "-15%" }}
     style={{}}
     className="TransLogo"
-    src={LOGO}
+    src={LOGO} loading="lazy"
     alt="tp3vIb.png" border="0"/>
 
     <motion.div exit={exit} className="hideScroll flexer Txt">
       <motion.img variants={img} initial={"hidden"} whileInView={"unhidden"}
-        viewport={{once:false, amount:0.35}}
+        viewport={{once:false, amount:0.35}} loading="lazy"
         src={FileDrawer} className="BGimghome" />
       <motion.div className="hideScroll" variants={text} initial={"hidden"} animate={"unhidden"}
         transition={{staggerChildren:1}}>
@@ -61,7 +61,7 @@ export default function Home() {
 
     <motion.div exit={exit} className="flexer Txt" >
      <motion.img variants={img} initial={"hidden"} whileInView={"unhidden"}
-        viewport={{once:false, amount:0.6}}
+        viewport={{once:false, amount:0.6}} loading="lazy"
         src={HandShaker} className="BGimghome imgSpace" />
       <motion.div className="hideScroll" variants={text} initial={"hidden"} animate={"unhidden"}
         transition={{staggerChildren:1}}>
@@ -78,7 +78,7 @@ export default function Home() {
 
     <motion.div exit={exit} className="imgContainer flexer Txt">
      <motion.img variants={img} initial={"hidden"} whileInView={"unhidden"}
-        viewport={{once:false, amount:0.6}}
+        viewport={{once:false, amount:0.6}} loading="lazy"
         src={Typer} className="BGimghome imgSpace" />
       <motion.div className="hideScroll" variants={text} initial={"hidden"} animate={"unhidden"}
         transition={{staggerChildren:1}}>
@@ -90,7 +90,7 @@ export default function Home() {
 
     <motion.div exit={exit} className="imgContainer flexer Txt">
      <motion.img variants={img} initial={"hidden"} whileInView={"unhidden"}
-        viewport={{once:false, amount:0.6}}
+        viewport={{once:false, amount:0.6}} loading="lazy"
         src={HandPlant} className="BGimghome imgSpace" />
       <motion.div className="hideScroll" variants={text} initial={"hidden"} animate={"unhidden"}
         transition={{staggerChildren:1}}>
