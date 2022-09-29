@@ -1,5 +1,4 @@
 import React from 'react';
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import { motion } from "framer-motion";
 import {theme} from '../Themes';
 import { ThemeProvider } from '@emotion/react';
@@ -8,14 +7,12 @@ import Grid from '@mui/material/Grid';
 import CarouselComp from '../APLayout/Carousel';
 import '../carousel.css';
 //Img
-import PlaceholderImage from '../APAssets/PlaceholderImage.jpg'
 import LOGO from '../APAssets/LOGO.jpg';
 import SquareLogo from '../APAssets/SquareLogo.jpg';
 import RedFiles from '../APAssets/RedFiles.jpg'
 import FWBN from '../APAssets/FWBN.jpg';
 import ActionCoach from '../APAssets/ActionCoach.jpg';
 import SASLAW from '../APAssets/SASLAW.jpg';
-// import FatimaLI from '../APAssets/FatimaLI.jpg';
 
 const transition = { duration: 1.4, ease:[0.6, 0.01, -0.05, 0.9]};
 
@@ -53,14 +50,13 @@ export default function About() {
     <>
       <ThemeProvider theme={theme}>
         <motion.div className="hideScroll" >
-          <motion.LazyLoadImage exit={{width:"100%", y:"-15%", x:0, opacity:1, transition: { delay: 0.2, ...transition } }}
+          <motion.img exit={{width:"100%", y:"-15%", x:0, opacity:1, transition: { delay: 0.2, ...transition } }}
             animate={{ y: 0, x:-500, opacity: 0, width: "75%", transition: { delay: 0.2, ...transition } }}
             initial={{ width:"100%", y: "-15%" }}
             style={{"position": "absolute"}}
             className="TransLogo"
             src={LOGO}
-            PlaceholderSrc={PlaceholderImage}
-            effect="blur"
+            loading="lazy"
             alt="tp3vIb.png" border="0"/>
           <motion.div className="hideScroll" >
 
