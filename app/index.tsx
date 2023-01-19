@@ -56,12 +56,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       REACT
-        <motion.div style={{width:"100px"}} exit={{width:"100%", y:"-15%", transition: { delay: 0.2, ...transition } }}
+        {/* <motion.div style={{width:"100px"}} exit={{width:"100%", y:"-15%", transition: { delay: 0.2, ...transition } }}
         animate={{ y: 0, width: "70%", transition: { delay: 0.2, ...transition } }}
         initial={{ width:"100%", y: "-15%" }}
         className="TransLogo" >
             <Image src={LOGO} alt="logo" style={{objectFit:"contain"}} />
-        </motion.div>
+        </motion.div> */}
 
       {/* <motion.img exit={{width:"100%", y:"-15%", transition: { delay: 0.2, ...transition } }}
         animate={{ y: 0, width: "70%", transition: { delay: 0.2, ...transition } }}
