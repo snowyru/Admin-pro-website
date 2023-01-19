@@ -43,7 +43,8 @@ export default function RootLayout({
         <main>
           <nav>
             {/* <motion.div exit={{y:-50, opacity:0, transition: { delay: 0.2, ...transition }}} initial={{opacity:0, y:-220}} animate={{y:0, opacity:1, transition: {...transition}}} id="top"> */}
-            <div>
+            <div>0
+.
             <AppBar position="sticky" sx={{ bgcolor: "#3B3F3F" }}>
               <Container maxWidth="xl">
                 <Toolbar disableGutters>
