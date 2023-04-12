@@ -1,107 +1,206 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html,
-body {
-  max-width: 100vw;
+*{
   overflow-x: hidden;
 }
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.container{
+  padding:2.5vw;
+}
+.hideScroll{
+  overflow: hidden;
+}
+.hideScroll-x{
+  width:100%;
+  height:100%;
+  margin-bottom: -50vh;
+  overflow-x: hidden;
+}
+.flexer{
+  overflow-y: hidden;
+  position: relative;
+  margin-bottom: 6vw;
+}
 a {
-  color: inherit;
-  text-decoration: none;
+  color: white;
 }
+.TransLogo{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-top: 1rem;
+  padding-bottom:1rem;
+}
+/* START OF START PAGE */
+/* @media (min-width:480px) {
+  .transLOGO
+  {width:clamp(314px,90%,4000px);}  
+} */
+.BGvid{
+  position:absolute;
+  width: 100%;
+  aspect-ratio: 7/16 ;
+  object-fit: cover;
+}
+.btnEmail {
+  z-index: 3;
+  position: relative;
+  top:-30vh;
+  display:flex;
+  justify-content: center;
+}
+.btnStart {
+  z-index: 3;
+  position: relative;
+  padding-left: 10vw;
+  display: flex;
+  justify-content: center;
+}
+.StartLogo{
+  padding-top:2%;
+  position:relative;
+  width: 97%;
+  padding-left:clamp(0px,1vw,10px);
+}
+.APLogo{
+  z-index: 1;
+  opacity: 0;
+  transition: 1.5s ease-in ;
+  padding-top:0px;
+  position:fixed;
+  width: 100%;
+}
+.APLogo:hover{
+  opacity: 1;
+  transition: 0.5s ease-out ;
+}
+.startContainer{
+  position:fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index:0;
+  line-height:90vh
+}
+.BGimg{
+  position:fixed;
+  width: 100%;
+  height: 100vh;
+}
+/* END OF START PAGE */
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* START OF HOME PAGE */
+.BGimghome{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
 }
+.imgSpace{
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+}
+.lead{
+  padding-top: 2vw;
+  position: relative;
+  text-align: center;
+  color:rgb(255, 231, 231);
+  font-family: source-code-pro;
+  font-style: italic;
+  font-size: clamp(1.2rem, 6vw - 2rem, 8rem);
+}
+.sub{
+  position: relative;
+  text-align: center;
+  color: rgb(255, 232, 232);
+  font-family: source-code-pro;
+  font-size: clamp(1rem, 5vw - 2rem, 6rem);
+}
+.Txt{
+overflow:hidden;
+ min-height: clamp(30vh,33vh,35vh);
+ width: 100%;
+}  
+/* END OF HOME PAGE */
+
+/* START OF ABOUT PAGE */
+.leadBig{
+  padding-right: 1vw;
+  position: relative;
+  text-align: center;
+  color:rgb(255, 255, 255);
+  font-family: source-code-pro;
+  font-style: italic;
+  font-size: clamp(1.6rem, 3.4vw, 8rem);
+  border-bottom: 0.3vw double rgba(255, 0, 0, 0.736);
+}
+.leadSmall{
+  padding-right: 1vw;
+  position: relative;
+  text-align: center;
+  color:rgb(255, 255, 255);
+  font-family: source-code-pro;
+  font-style: italic;
+  font-size: clamp(1rem, 2.7vw, 8rem);
+  border-bottom: 0.3vw double rgba(255, 0, 0, 0.736);
+}
+.subSmall{
+  padding: 0.5vw;
+  position: relative;
+  text-align: center;
+  color:rgb(255, 255, 255);
+  font-family: source-code-pro;
+  font-size: clamp(0.8rem, 1.82vw , 6rem);
+}
+.leadName{
+  padding-right: 1vw;
+  position: relative;
+  text-align: center;
+  color:rgb(255, 255, 255);
+  font-family: source-code-pro;
+  font-style: bold;
+  font-size: clamp(1.6rem, 3.4vw, 8rem);
+  border-bottom: 0.3vw dotted rgb(255, 0, 0);
+}
+.infoScreen {
+  position: fixed;
+  display: block;
+  background-color: #5A0A0A;
+  border-radius: 5vw;
+  width: clamp(50%,90vh,85%);
+  min-height: 60%;
+}
+.infoh1{
+  text-align: center;
+  justify-content: center;
+  font-family: source-code-pro;
+  font-style: italic;
+  font-size: clamp(1.3rem, 3.5vw, 8rem);
+}
+.infop{
+  text-align: center;
+  justify-content: center;
+  font-family: source-code-pro;
+  font-size: clamp(1rem, 1.5vw , 6rem)
+}
+.clientImg{
+  width:12vw;
+}
+.topPad{
+  margin-top:4vh;
+}
+/* END OF ABOUT PAGE */

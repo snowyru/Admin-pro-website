@@ -3,9 +3,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import React, {useState} from 'react';
-import Logo from "../public/APAssets/APunderline.png";
-import './globals.css';
-import NavItem from '../comp/NavItem';
 
 const MENU_LIST = [
   { text: "Home", href: "/" },
@@ -19,14 +16,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
 
-  const [navActive, setNavActive] = useState<navActive | null>(null);
-  const [activeIdx, setActiveIdx] = useState(-1);
+  // const [navActive, setNavActive] = useState<navActive | null>(null);
+  // const [activeIdx, setActiveIdx] = useState(-1);
 
   return (
     <html>
       <body>
         <main>
-          <nav className={`nav`}>
+          {/* <nav className={`nav`}>
               <Link href={"/"}>
                   <h1 className="logo">LOF</h1>
               </Link>
@@ -51,7 +48,7 @@ export default function RootLayout({
                   </div>
                 ))}
               </div>
-            </nav>
+            </nav> */}
           {children}
         </main>
       </body>
