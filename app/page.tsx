@@ -8,36 +8,36 @@ import Typer from '../public/Typer.jpg';
 import HandPlant from '../public/HandPlant.jpg';
 import LOGO from '../public/LOGO.jpg';
 
-export default function Home() {
+const Home = () => {
 
-  // const transition = { duration: 1.4, ease:[0.6, 0.01, -0.05, 0.9]};
-  // const text = { 
-  //   hidden:{
-  //     y:1000,
-  //     opactiy:0,
-  //   },
-  //   unhidden:{
-  //     y:0,
-  //     opacity:1,
-  //   }
-  // }
-  // const img={ 
-  //   hidden:{
-  //     scale:0.85,
-  //     opacity:0.1
-  //   },
-  //   unhidden:{
-  //     scale:1,
-  //     opacity:0.55,
-  //     transition:{duration:1.4, ease:[0.6, 0.01, -0.05, 0.9]},
-  //   }
-  // }
+  const transition = { duration: 1.4, ease:[0.6, 0.01, -0.05, 0.9]};
+  const text = { 
+    hidden:{
+      y:1000,
+      opactiy:0,
+    },
+    unhidden:{
+      y:0,
+      opacity:1,
+    }
+  }
+  const img={ 
+    hidden:{
+      scale:0.85,
+      opacity:0.1
+    },
+    unhidden:{
+      scale:1,
+      opacity:0.55,
+      transition:{duration:1.4, ease:[0.6, 0.01, -0.05, 0.9]},
+    }
+  }
   
-  // const exit = { 
-  //   opacity : 0,
-  //   x : -400,
-  //   transition:{duration: 1.4, ease:[0.6, 0.01, -0.05, 0.9]},
-  //  }
+  const exit = { 
+    opacity : 0,
+    x : -400,
+    transition:{duration: 1.4, ease:[0.6, 0.01, -0.05, 0.9]},
+   }
 
   return (
   <>
@@ -112,3 +112,5 @@ export default function Home() {
   </>
   );
 }
+
+export default Home

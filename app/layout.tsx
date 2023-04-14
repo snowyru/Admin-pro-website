@@ -1,8 +1,10 @@
 /* eslint-disable @next/next/no-head-element */
-'use client'
+import { ThemeProvider } from '@mui/material/styles';
+import theme from '../styles/theme';
+import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import React, {useState} from 'react';
+// import React, {useState} from 'react';
 
 const MENU_LIST = [
   { text: "Home", href: "/" },
@@ -20,38 +22,17 @@ export default function RootLayout({
   // const [activeIdx, setActiveIdx] = useState(-1);
 
   return (
-    <html>
-      <body>
+    <>
+      <Head>
+        <title>Adminpro</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <ThemeProvider theme={theme}>
         <main>
-          {/* <nav className={`nav`}>
-              <Link href={"/"}>
-                  <h1 className="logo">LOF</h1>
-              </Link>
-              <div
-                onClick={() => setNavActive(!navActive)}
-                className={`nav__menu-bar`}
-              >
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-              <div className={`${navActive ? "active" : ""} nav__menu-list`}>
-                {MENU_LIST.map((menu, idx) => (
-                  <div
-                    onClick={() => {
-                      setActiveIdx(idx);
-                      setNavActive(false);
-                    }}
-                    key={menu.text}
-                  >
-                    <NavItem active={activeIdx === idx} {...menu} />
-                  </div>
-                ))}
-              </div>
-            </nav> */}
-          {children}
+          
         </main>
-      </body>
-    </html>
+      </ThemeProvider>
+    </>
   );
 }
