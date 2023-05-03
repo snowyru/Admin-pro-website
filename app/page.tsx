@@ -34,8 +34,8 @@ const Home = () =>{
 
   return(
     <>
-      <motion.div drag initial={{x:0}} animate={{x:100}} transistion={{transition}}>
-        <p>testing animation</p>
+      <motion.div drag initial={{x:0}} animate={{x:100}}>
+        <h1>testing content animation</h1>
       </motion.div>  
     </>
   )

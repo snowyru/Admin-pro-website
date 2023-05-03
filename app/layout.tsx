@@ -1,4 +1,5 @@
 import './globals.css'
+import APNavBar from '../components/APNavBar'
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <APNavBar/>
+        {children}
+      </body>
     </html>
   )
 }
