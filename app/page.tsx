@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 
 const Home = () =>{
   
-  const transition = { duration: 1.4, ease:[0.6, 0.01, -0.05, 0.9]};
+  const transition = { duration: 1.4, ease:[0.680, -0.550, 0.265, 1.550]};
   const text = { 
     hidden:{
       y:1000,
