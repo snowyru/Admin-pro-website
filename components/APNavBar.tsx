@@ -1,13 +1,16 @@
 
+'use client'
 import {motion} from 'framer-motion';
-
+import {useRouter} from 'next/navigation';
+import {SetStateAction, useState} from 'react'
+//REMOVE ANCHORELNAV FOR FRAMER MOTION MOTION.UL
 const APNavBar = () =>{
 
     const transition = { duration: 1.4, ease:[0.6, 0.01, -0.05, 0.9]};
 
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
+    const [anchorElNav, setAnchorElNav] = useState<EventTarget & HTMLButtonElement | null>(null);
 
-    const handleOpenNavMenu = (event) => {
+    const handleOpenNavMenu = (event: React.MouseEvent<HTMLButtonElement>) => {
         setAnchorElNav(event.currentTarget);
       };
     
@@ -15,10 +18,10 @@ const APNavBar = () =>{
         setAnchorElNav(null);
       };
     
-      let Navigate = useNavigate();
-      const link = (page) => {
+      const router = useRouter();
+      const link = (page: string) => {
         var url = page.replace(/\s+/g, '');
-        Navigate("/"+url);
+        router.push("/"+url);
       };
 
 
@@ -54,7 +57,10 @@ const APNavBar = () =>{
                         onClick={handleOpenNavMenu}
                         color="inherit"
                     >
-                        <MenuIcon />
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+
                     </motion.button>
                     <motion.div
                         id="menu-appbar"
@@ -73,9 +79,9 @@ const APNavBar = () =>{
                         style={{ display: 'block', }}
                     >
                         {pages.map((page) => (
-                        <MenuItem key={page} onClick={()=>{handleCloseNavMenu(); link(page)}}>
-                            <Typography style={{textAlign: 'center'}}>{page}</Typography>
-                        </MenuItem>
+                        <motion.div key={page} onClick={()=>{handleCloseNavMenu(); link(page)}}>
+                            <motion.div style={{textAlign: 'center'}}>{page}</motion.div>
+                        </motion.div>
                         ))}
                     </motion.div>
                 </div>
