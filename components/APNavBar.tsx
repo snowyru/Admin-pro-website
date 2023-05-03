@@ -49,7 +49,6 @@ const APNavBar = () =>{
                             Admin Professional
                         </motion.a>
 
-                            {/* Hide the dropdown menu button for PCs using the hidden class from Tailwind CSS */}
                             <motion.button
                                 className="bg-gray-300 p-2 rounded-md hidden sm:block md:hidden"
                                 onClick={handleToggleMenu}
@@ -58,7 +57,7 @@ const APNavBar = () =>{
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                                 </svg>
                             </motion.button>
-                            {/* Display the pages in the navbar for PCs */}
+
                             <motion.div
                                 style={{
                                 flexGrow: 1,
@@ -77,15 +76,16 @@ const APNavBar = () =>{
                                     ~ {page.name} ~
                                 </motion.button>
                                 ))}
+                                Ip config 
                             </motion.div>
 
                         <motion.div style={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
                             {isOpen && ( 
                                 <motion.ul
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 50 }}
+                                    initial={{ opacity: 0,y:0 ,x:-50}}
+                                    animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.2 }}
-                                    className="absolute bg-black shadow-md rounded-md p-2 mt-2 hidden sm:block md:hidden"
+                                    className="absolute bg-black left-0 shadow-md rounded-md p-2 hidden sm:block md:hidden"
                                     >
                                     {/* Map the pages array to display the page names and links in the dropdown menu */}
                                     {pages.map((page) => (
